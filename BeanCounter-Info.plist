@@ -65,7 +65,7 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2012 The Iconfactory</string>
+	<string>Copyright © 2014 The Iconfactory</string>
 #ifndef MAC_APP_STORE
 	<key>SUFeedURL</key>
 	<string>http://iconfactory.com/appcasts/BeanCounter/appcast.xml</string>

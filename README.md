@@ -5,9 +5,9 @@
 
 ### Show Me The Money!
 
-For a quick demo, open the TestData/SafetyLight.beans document after you build the BeanCounter app. Now you know how well a flashlight app can sell in the iOS App Store. :-)
+For a quick demo, open the `TestData/SafetyLight.beans` document after you build the BeanCounter app. Now you know how well a flashlight app can sell in the iOS App Store. :-)
 
-A majority of the sales for [Safety Light](http://safetylightapp.com/) came from a link at [Daring Fireball](http://daringfireball.net/linked/2009/12/29/safety-light) at the end of December 2009, but there was also a small blip in April 2012 thanks to a mention in Reader's Digest. As a way to thank my pal John Gruber for providing data for [my book on building and marketing iOS apps](http://appdevmanual.com/about/), I've donated the app's proceeds to his [family's charity](http://faan.convio.net/site/TR/2012Walks/2012Walks?px=1823877&pg=personal&fr_id=2177).
+A majority of the sales for [Safety Light](http://safetylightapp.com/) came from a link at [Daring Fireball](http://daringfireball.net/linked/2009/12/29/safety-light) at the end of December 2009, but there was also a small blip in April 2012 thanks to a mention in Reader's Digest. As a way to thank my pal John Gruber for providing data in [my book on building and marketing iOS apps](http://appdevmanual.com/about/), I've donated the app's proceeds to his [family's charity](http://faan.convio.net/site/TR/2012Walks/2012Walks?px=1823877&pg=personal&fr_id=2177).
 
 
 ### What Problems Does This App Solve?
@@ -18,7 +18,7 @@ As the [Iconfactory](http://iconfactoryapps.com) has moved a significant part of
 * No aggregate reporting of multiple SKUs — How much did we earn with Product C and all its in-app purchases?
 * No way to compute partner splits — How much we owe a partner who gets 50% of Product D earnings? 
 * Hard to visualize the earnings across multiple regions —  How do launch sales for Product E in Japan compare to the US?
-* No way to get the number of sales for a single product in a single region — How much do we owe fucking Lodsys for Twitterrific in-app upgrades in the US?
+* No way to get the number of sales for a single product in a single region — How much do you owe fucking Lodsys for in-app upgrades in the US?
 
 BeanCounter reads all the monthly financial reports through an import process. You then manually reconcile the deposit amounts from iTunes Connect to compute the exact exchange rate. That rate is then applied to one or more months of sales and result in earnings which are accurate to a fractional cent (we use decimal numbers throughout the application to ensure accuracy.)
 
