@@ -33,7 +33,7 @@ BeanCounter is useful, and it suits our needs. As we've learned with AppViz, the
 
 Please ignore how bad this product looks: like I said, this is the first time we've let a product so ugly out of our internal group of testers.
  
-But don't let the alpha designation give you any misgivings about the product's stability. We've been using it internally for _years_. We have paid partners and lawyers based on the information in the reports.
+But don't let the alpha designation give you any misgivings about the product's stability. We've been using it internally for _years_. We have paid partners based on the information in the reports.
 
 
 ## Setup
