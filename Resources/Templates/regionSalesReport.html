@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<link href="report.css" media="screen" rel="Stylesheet" type="text/css" />
+		<link href="print.css" media="print" rel="Stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h2>Region Sales: {{ reportTitle }}</h2>
+		
+		<!-- TODO: decide if each region should be in its own table or a single table with dividers -->
+		
+{% for categoryData in categoryArray %}
+	{% if categoryData.categoryName %}
+		<h3>{{ categoryData.categoryName }}</h3>
+	{% /if %}
+		
+	{% for regionData in categoryData.regionArray %}
+		<table>
+			<tr class="header">
+				<th class="product" colspan="2">{{ regionData.region.name }}</th>
+				<th class="sales">Sales</th>
+				<th class="units">Units</th>
+				<th class="country"></th>
+				<th class="percentage"></th>
+			</tr>
+		{% for productData in regionData.productArray %}
+			<tr class="summary">
+				<td class="product"></td>
+				<td class="region">{{ productData.product.name }}</td>
+				<td class="sales">{{ productData.salesSummaryFormatted }}</td>
+				<td class="units">{{ productData.unitsSummaryFormatted }}</td>
+				<td class="country"></td>
+				<td class="percentage"></td>
+			</tr>
+			{% for salesData in productData.salesArray %}
+			<tr class="detail">
+				<td class="product"></td>
+				<td class="region"></td>
+				<td class="sales">{{ salesData.salesDetailFormatted }}</td>
+				<td class="units">{{ salesData.unitsDetailFormatted }}</td>
+				<td class="country">{{ salesData.countryDetailFormatted }}</td>
+				<td class="percentage">{{ salesData.percentageDetailFormatted }}</td>
+			</tr>
+			{% /for %}
+		{% /for %}
+			<tr class="total">
+				<td class="product"></td>
+				<td class="region">Total</td>
+				<td class="sales">{{ regionData.salesTotalFormatted }}</td>
+				<td class="units">{{ regionData.unitsTotalFormatted }}</td>
+				<td class="country"></td>
+				<td class="percentage"></td>
+			</tr>
+		</table>
+	{% /for %}
+	{% if categoryData.categoryName %}
+		<div>
+		{% if categoryData.categoryUnitsTotalFormatted %}
+			<p>Total Units: {{ categoryData.categoryUnitsTotalFormatted }}</p>
+		{% /if %}
+		</div>
+	{% /if %}
+{% /for %}
+{% if grandUnitsTotalFormatted %}
+		<p><strong>Grand Total Units: {{ grandUnitsTotalFormatted }}</strong></p>
+{% /if %}
+	</body>
+</html>

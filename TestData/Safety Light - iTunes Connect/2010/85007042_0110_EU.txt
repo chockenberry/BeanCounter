@@ -1,0 +1,23 @@
+Start Date	End Date	UPC	ISRC	Vendor Identifier	Quantity	Partner Share	Extended Partner Share	Partner Share Currency	Sales or Return	Apple Identifier	Artist/Show/Developer	Title	Label/Studio/Network/Developer	Grid	Product Type Identifier	ISAN/Other Identifier	Country Of Sale	Pre-order Flag	Promo Code	Customer Price	Customer Currency
+12/27/2009	01/30/2010			OMGWTFBBQ001	1	0.48	0.48	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		LV			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	22	0.48	10.56	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		DK			6.00	DKK
+12/27/2009	01/30/2010			OMGWTFBBQ001	4	0.48	1.92	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		LU			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	1	0.48	0.48	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		RO			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	17	0.48	8.16	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		ES			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	1	0.48	0.48	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		CZ			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	31	0.48	14.88	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		NO			6.00	NOK
+12/27/2009	01/30/2010			OMGWTFBBQ001	19	0.48	9.12	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		CH			1.10	CHF
+12/27/2009	01/30/2010			OMGWTFBBQ001	49	0.48	23.52	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		SE			7.00	SEK
+12/27/2009	01/30/2010			OMGWTFBBQ001	4	0.48	1.92	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		GR			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	6	0.48	2.88	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		BE			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	12	0.48	5.76	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		IE			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	2	0.48	0.96	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		PL			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	57	0.48	27.36	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		DE			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	44	0.48	21.12	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		NL			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	10	0.48	4.80	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		PT			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	29	0.48	13.92	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		FR			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	9	0.48	4.32	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		AT			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	4	0.48	1.92	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		HU			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	7	0.48	3.36	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		FI			0.79	EUR
+12/27/2009	01/30/2010			OMGWTFBBQ001	108	0.48	51.84	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		IT			0.79	EUR
+Total_Amount:209.76

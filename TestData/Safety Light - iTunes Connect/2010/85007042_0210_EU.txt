@@ -1,0 +1,15 @@
+Start Date	End Date	UPC	ISRC	Vendor Identifier	Quantity	Partner Share	Extended Partner Share	Partner Share Currency	Sales or Return	Apple Identifier	Artist/Show/Developer	Title	Label/Studio/Network/Developer	Grid	Product Type Identifier	ISAN/Other Identifier	Country Of Sale	Pre-order Flag	Promo Code	Customer Price	Customer Currency
+01/31/2010	02/27/2010			OMGWTFBBQ001	5	0.48	2.40	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		SE			7.00	SEK
+01/31/2010	02/27/2010			OMGWTFBBQ001	6	0.48	2.88	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		NL			0.79	EUR
+01/31/2010	02/27/2010			OMGWTFBBQ001	1	0.48	0.48	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		CZ			0.79	EUR
+01/31/2010	02/27/2010			OMGWTFBBQ001	2	0.48	0.96	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		IE			0.79	EUR
+01/31/2010	02/27/2010			OMGWTFBBQ001	16	0.48	7.68	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		NO			6.00	NOK
+01/31/2010	02/27/2010			OMGWTFBBQ001	3	0.48	1.44	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		CH			1.10	CHF
+01/31/2010	02/27/2010			OMGWTFBBQ001	3	0.48	1.44	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		BE			0.79	EUR
+01/31/2010	02/27/2010			OMGWTFBBQ001	3	0.48	1.44	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		DK			6.00	DKK
+01/31/2010	02/27/2010			OMGWTFBBQ001	25	0.48	12.00	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		IT			0.79	EUR
+01/31/2010	02/27/2010			OMGWTFBBQ001	2	0.48	0.96	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		ES			0.79	EUR
+01/31/2010	02/27/2010			OMGWTFBBQ001	2	0.48	0.96	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		AT			0.79	EUR
+01/31/2010	02/27/2010			OMGWTFBBQ001	6	0.48	2.88	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		DE			0.79	EUR
+01/31/2010	02/27/2010			OMGWTFBBQ001	1	0.48	0.48	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		MT			0.79	EUR
+Total_Amount:36

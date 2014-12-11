@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>sourceListSelectedItem</key>
+	<string>Import Reports</string>
+	
+	<key>chartPeriod</key>
+	<integer>0</integer>
+	<key>chartShowTotal</key>
+	<true/>
+	<key>chartCategory</key>
+	<integer>0</integer>
+	
+	<key>chartFilterProducts</key>
+	<integer>0</integer>
+	<key>chartFilterGroup</key>
+	<integer>0</integer>
+	<key>chartFilterPartner</key>
+	<integer>0</integer>
+	
+	<key>reportPeriod</key>
+	<integer>0</integer>
+	<key>reportMonth</key>
+	<integer>1</integer>
+	<key>reportYear</key>
+	<integer>2010</integer>
+	<key>reportShowDetails</key>
+	<false/>
+	<key>reportCategory</key>
+	<integer>0</integer>
+	
+	<key>reportFilterProducts</key>
+	<integer>0</integer>
+	<key>reportFilterGroup</key>
+	<integer>0</integer>
+	<key>reportFilterPartner</key>
+	<integer>0</integer>
+	
+	<key>importDeleteReportMonth</key>
+	<integer>7</integer>
+	<key>importDeleteReportYear</key>
+	<integer>2010</integer>
+	
+	<key>reconcileReportMonth</key>
+	<integer>7</integer>
+	<key>reconcileReportYear</key>
+	<integer>2010</integer>
+	
+	<key>accountEarningsStart</key>
+	<integer>0</integer>
+</dict>
+</plist>

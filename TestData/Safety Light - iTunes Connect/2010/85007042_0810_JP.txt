@@ -1,0 +1,5 @@
+Start Date	End Date	UPC	ISRC/ISBN	Vendor Identifier	Quantity	Partner Share	Extended Partner Share	Partner Share Currency	Sales or Return	Apple Identifier	Artist/Show/Developer/Author	Title	Label/Studio/Network/Developer/Publisher	Grid	Product Type Identifier	ISAN/Other Identifier	Country Of Sale	Pre-order Flag	Promo Code	Customer Price	Customer Currency
+08/01/2010	08/28/2010			OMGWTFBBQ001	1	245.00	245.00	JPY	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		JP			350.00	JPY
+Total_Rows	1
+Total_Amount	245
+Total_Units	1

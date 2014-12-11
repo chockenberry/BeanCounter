@@ -1,0 +1,12 @@
+Apple Number      : 0085007042
+Calendar MMYY     : 0110
+Origin            : 0164 iTunes S.a.r.l., Luxembourg
+Currency          : GBP
+
+
+Prior Balance                          4.32
+Current Month                        100.44
+Withholding Tax                                                        0.00
+GST/JCT Tax                                                            0.00
+                                                       --------------------
+Payment                                                              104.76

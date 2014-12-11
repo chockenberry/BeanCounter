@@ -1,0 +1,5 @@
+Start Date	End Date	UPC	ISRC	Vendor Identifier	Quantity	Partner Share	Extended Partner Share	Partner Share Currency	Sales or Return	Apple Identifier	Artist/Show/Developer	Title	Label/Studio/Network/Developer	Grid	Product Type Identifier	ISAN/Other Identifier	Country Of Sale	Pre-order Flag	Promo Code	Customer Price	Customer Currency
+02/28/2010	03/27/2010			OMGWTFBBQ001	1	2.43	2.43	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		IT			3.99	EUR
+02/28/2010	03/27/2010			OMGWTFBBQ001	1	0.48	0.48	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		CH			1.10	CHF
+02/28/2010	03/27/2010			OMGWTFBBQ001	1	0.48	0.48	EUR	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		DE			0.79	EUR
+Total_Amount:3.39

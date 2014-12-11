@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  BeanCounter
+
+  Created by Craig Hockenberry on 11/28/11.
+  Copyright (c) 2011 The Iconfactory. All rights reserved.
+*/
+
+"ParseReportProgress" = "Parsed %@ of %@ reports…";
+"ImportReportProgress" = "Imported %@ of %@ records…";
+"ImportDepositProgress" = "Imported %@ of %@ deposits…";
+
+"RegistrationEmpty" = "This copy of BeanCounter is unlicensed. Please enter your name and serial number above.";
+"RegistrationInvalid" = "The name and serial number are not valid. Please check the fields and try again.";
+"RegistrationValid" = "Thank you for purchasing BeanCounter!";
+"RegistrationValidMultiple" = "Thank you for purchasing %d licenses of BeanCounter!";

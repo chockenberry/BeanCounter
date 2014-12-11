@@ -1,0 +1,6 @@
+Start Date	End Date	UPC	ISRC/ISBN	Vendor Identifier	Quantity	Partner Share	Extended Partner Share	Partner Share Currency	Sales or Return	Apple Identifier	Artist/Show/Developer/Author	Title	Label/Studio/Network/Developer/Publisher	Grid	Product Type Identifier	ISAN/Other Identifier	Country Of Sale	Pre-order Flag	Promo Code	Customer Price	Customer Currency
+11/28/2010	12/25/2010			OMGWTFBBQ001	1	2.10	2.10	USD	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		MX			30.00	MXN
+11/28/2010	12/25/2010			OMGWTFBBQ001	20	2.10	42.00	USD	S	345338860	Craig Hockenberry	Flashlight + Safety Light			1		US			2.99	USD
+Total_Rows	2
+Total_Amount	44.1
+Total_Units	21

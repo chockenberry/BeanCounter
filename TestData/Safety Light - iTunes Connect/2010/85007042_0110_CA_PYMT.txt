@@ -1,0 +1,12 @@
+Apple Number      : 0085007042
+Calendar MMYY     : 0110
+Origin            : 0061 Apple Canada, Canada
+Currency          : CAD
+
+
+Prior Balance                          4.90
+Current Month                        607.60
+Withholding Tax                                                        0.00
+GST/JCT Tax                                                            0.00
+                                                       --------------------
+Payment                                                              612.50

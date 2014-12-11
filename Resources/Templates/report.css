@@ -1,0 +1,91 @@
+body {
+	background-color: white;
+	font-family: HelveticaNeue;
+}
+
+table {
+	border-collapse: collapse;
+	white-space: nowrap;
+	width: 100%;
+	margin-top: 20px;
+}
+th {
+	font-size: 14px;
+	padding: 4px;
+}
+td {
+	font-size: 12px;
+	background-color: #f7f7f7;
+	padding: 2px;
+}
+
+tr.header {
+	color: #600;
+	font-family: HelveticaNeue-CondensedBold;
+}
+tr.item {
+}
+tr.detail {
+	color: #666;
+}
+tr.summary {
+	font-style: italic;
+}
+tr.total {
+	font-weight: bold;
+}
+
+.product {
+	text-align:left;
+}
+.region {
+	text-align:left;
+}
+.units {
+	text-align:right;
+}
+.sales {
+	text-align:right;
+}
+.country {
+	text-align:left;
+}
+.percentage {
+	text-align:right;
+}
+.deposit {
+	text-align:right;
+}
+.date {
+	text-align:right;
+}
+
+td.deposit > input {
+	font-family: Helvetica;
+	font-size: 12px;
+	text-align: right;
+}
+
+td.deposit > span {
+	padding-right: 6px;
+}
+
+tr.header > th {
+	background-color: #e7e7e7;
+}
+tr.product > td {
+	background-color: #d7d7d7;
+}
+tr.summary > td.region {
+	text-align:right;
+}
+tr.summary > td {
+	border-top: 1px solid #666;
+}
+tr.total > td.region {
+	text-align:right;
+}
+tr.total > td {
+	border-top: 1px solid #666;
+	background-color: #e7e7e7;
+}

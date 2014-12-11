@@ -1,0 +1,12 @@
+Apple Number      : 0085007042
+Calendar MMYY     : 0310
+Origin            : 0056 Apple Inc., USA
+Currency          : USD
+
+
+Prior Balance                        109.20
+Current Month                         56.00
+Withholding Tax                                                        0.00
+GST/JCT Tax                                                            0.00
+                                                       --------------------
+Payment                                                              165.20

@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<link href="report.css" media="screen" rel="Stylesheet" type="text/css" />
+		<link href="print.css" media="print" rel="Stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h2>Product Earnings: {{ reportTitle }}</h2>
+		
+		<!-- TODO: decide if each product should be in its own table or a single table with dividers -->
+{% for categoryData in categoryArray %}
+	{% if categoryData.categoryName %}
+		<h3>{{ categoryData.categoryName }}</h3>
+	{% /if %}
+		
+	{% for productData in categoryData.productArray %}
+		<table>
+			<tr class="header">
+				<th class="product" colspan="2">{{ productData.product.name }}</th>
+				<th class="units">Units</th>
+				<th class="sales">Earnings</th>
+				<th class="date"></th>
+			</tr>
+		{% for regionData in productData.regionArray %}
+			<tr class="summary">
+				<td class="product"></td>
+				<td class="region">{{ regionData.region.name }}</td>
+				<td class="units">{{ regionData.unitsSummaryFormatted }}</td>
+				<td class="sales">{{ regionData.earningsSummaryFormatted }}</td>
+				<td class="date"></td>
+			</tr>
+			{% for earningsData in regionData.earningsArray %}
+			<tr class="detail">
+				<td class="product"></td>
+				<td class="region"></td>
+				<td class="units">{{ earningsData.unitsDetailFormatted }}</td>
+				<td class="sales">{{ earningsData.earningsDetailFormatted }}</td>
+				<td class="date">{{ earningsData.dateDetailFormatted }}</td>
+			</tr>
+			{% /for %}
+		{% /for %}
+			<tr class="total">
+				<td class="product"></td>
+				<td class="region">Total</td>
+				<td class="units">{{ productData.unitsTotalFormatted }}</td>
+				<td class="sales">{{ productData.earningsTotalFormatted }}</td>
+				<td class="date"></td>
+			</tr>
+		{% if productData.partnerName %}
+			<tr class="partner">
+				<td class="product"></td>
+				<td class="region"></td>
+				<td class="units"></td>
+				<td class="sales">{{ productData.partnerSplitFormatted }}</td>
+				<td class="date">{{ productData.partnerName }}</td>
+			</tr>
+		{% /if %}
+		</table>
+	{% /for %}
+	{% if categoryData.categoryName %}
+		<div>
+		{% if categoryData.categoryEarningsTotalFormatted %}
+			<p>Total Earnings: {{ categoryData.categoryEarningsTotalFormatted }}</p>
+			{% if categoryData.categoryPartnerSplitTotal > 0 %}
+			<p>Total Partner Earnings: {{ categoryData.categoryPartnerSplitTotalFormatted }}</p>
+			{% /if %}
+		{% /if %}
+		</div>
+	{% /if %}
+{% /for %}
+{% if grandEarningsTotalFormatted %}
+		<p><strong>Grand Total Earnings: {{ grandEarningsTotalFormatted }}</strong></p>
+{% /if %}
+	</body>
+</html>
