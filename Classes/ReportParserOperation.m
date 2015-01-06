@@ -189,6 +189,7 @@
 
 	NSDateFormatter *usDateFormatter = [[[NSDateFormatter alloc] init] autorelease];
 	[usDateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [usDateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
 	NSDateFormatter *internationalDateFormatter = [[[NSDateFormatter alloc] init] autorelease];
 	[internationalDateFormatter setDateFormat:@"dd.MM.yyyy"];
 	
