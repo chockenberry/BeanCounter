@@ -30,8 +30,8 @@
 	NSArray *chartVariables;
 	NSNumber *chartMaximum;
 	
-	__weak NSPersistentStoreCoordinator *_persistentStoreCoordinator; // weak reference
-	__weak NSObject <ProductEarningsChartOperationDelegate> *_delegate; // weak reference
+	NSPersistentStoreCoordinator *_persistentStoreCoordinator; // weak reference
+	NSObject <ProductEarningsChartOperationDelegate> *_delegate; // weak reference
 }
 
 @property (nonatomic, assign) NSUInteger chartCategory;

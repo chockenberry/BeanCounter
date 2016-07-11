@@ -19,8 +19,8 @@
 
 @interface DepositImporterOperation : NSOperation
 {
-	__weak NSObject <DepositImporterDelegate> *_delegate; // weak reference
-	__weak NSManagedObjectContext *_managedObjectContext; // weak reference
+	NSObject <DepositImporterDelegate> *_delegate; // weak reference
+	NSManagedObjectContext *_managedObjectContext; // weak reference
 
 	NSError *importError;
 	NSArray *depositData;

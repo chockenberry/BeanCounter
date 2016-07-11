@@ -23,7 +23,7 @@ typedef enum {
 
 @interface DepositParserOperation : NSOperation
 {
-	__weak NSObject <DepositParserDelegate> *_delegate; // weak reference
+	NSObject <DepositParserDelegate> *_delegate; // weak reference
 
 	NSError *reportError;
 	NSString *reportPath;

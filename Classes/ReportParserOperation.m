@@ -56,9 +56,6 @@
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 
 	InternationalInfo *internationalInfo = [InternationalInfo sharedInternationalInfo];
-
-	NSManagedObjectContext *managedObjectContext = _managedObjectContext;
-
 	
 	NSDateComponents *periodEndDateComponents = [[[NSDateComponents alloc] init] autorelease];
 	periodEndDateComponents.month = 1;
@@ -155,9 +152,9 @@
 	}
 	
 	// TODO: check if there are any existing sales for the period & region
-	Region *region = [Region fetchInManagedObjectContext:managedObjectContext withId:reportRegionId];
+	Region *region = [Region fetchInManagedObjectContext:_managedObjectContext withId:reportRegionId];
 	NSDate *periodEndDate = [[NSCalendar currentCalendar] dateByAddingComponents:periodEndDateComponents toDate:periodDate options:0];
-	NSUInteger salesCount = [Sale countAllInManagedObjectContext:managedObjectContext forRegion:region startDate:periodDate endDate:periodEndDate];
+	NSUInteger salesCount = [Sale countAllInManagedObjectContext:_managedObjectContext forRegion:region startDate:periodDate endDate:periodEndDate];
 	if (salesCount > 0) {
 		NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
 		dateFormatter.dateFormat = @"MMMM yyyy";

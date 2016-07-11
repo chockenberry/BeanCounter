@@ -25,8 +25,8 @@ typedef enum {
 
 @interface ReportImporterOperation : NSOperation
 {
-	__weak NSObject <ReportImporterDelegate> *_delegate; // weak reference
-	__weak NSManagedObjectContext *_managedObjectContext; // weak reference
+	NSObject <ReportImporterDelegate> *_delegate; // weak reference
+	NSManagedObjectContext *_managedObjectContext; // weak reference
 
 	NSError *importError;
 	NSArray *reportData;

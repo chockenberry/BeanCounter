@@ -228,6 +228,15 @@
 		<key>currencySymbol</key>
 		<string>₤</string>
 	</dict>
+	<key>TH</key>
+	<dict>
+		<key>name</key>
+		<string>Thailand</string>
+		<key>currency</key>
+		<string>THB</string>
+		<key>currencySymbol</key>
+		<string>฿</string>
+	</dict>
 
 </dict>
 </plist>

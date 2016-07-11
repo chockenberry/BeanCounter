@@ -23,8 +23,8 @@ typedef enum {
 
 @interface ReportParserOperation : NSOperation
 {
-	__weak NSManagedObjectContext *_managedObjectContext; // weak reference
-	__weak NSObject <ReportParserDelegate> *_delegate; // weak reference
+	NSManagedObjectContext *_managedObjectContext; // weak reference
+	NSObject <ReportParserDelegate> *_delegate; // weak reference
 
 	NSString *reportPath;
 	NSString *accountNumber;

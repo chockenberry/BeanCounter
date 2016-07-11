@@ -56,10 +56,8 @@
 	NSDate *importStart = [NSDate date];
 #endif
 	
-	NSManagedObjectContext *managedObjectContext = _managedObjectContext;
-
 #if DO_UNDO
-	NSUndoManager *undoManager = [managedObjectContext undoManager];
+	NSUndoManager *undoManager = [_managedObjectContext undoManager];
 	[undoManager beginUndoGrouping];
 #endif
 
@@ -84,13 +82,13 @@
 			
 			NSString *regionId = depositDatum.regionId;
 			
-			Region *region = [Region fetchInManagedObjectContext:managedObjectContext withId:regionId];
+			Region *region = [Region fetchInManagedObjectContext:_managedObjectContext withId:regionId];
 			
 			NSDateComponents *salesEndDateComponents = [[[NSDateComponents alloc] init] autorelease];
 			salesEndDateComponents.month = 1;
 			NSDate *salesEndDate = [[NSCalendar currentCalendar] dateByAddingComponents:salesEndDateComponents toDate:targetDate options:0];
 			
-			NSArray *sales = [Sale fetchAllInManagedObjectContext:managedObjectContext forRegion:region startDate:targetDate endDate:salesEndDate];
+			NSArray *sales = [Sale fetchAllInManagedObjectContext:_managedObjectContext forRegion:region startDate:targetDate endDate:salesEndDate];
 			NSDecimalNumber *salesTotal = [sales valueForKeyPath:@"@sum.total"];
 			
 			BOOL importData = NO;
@@ -107,7 +105,7 @@
 				NSDate *balanceEndDate = [[NSCalendar currentCalendar] dateByAddingComponents:balanceEndDateComponents toDate:targetDate options:0];
 				
 				NSDate *balanceStartDate = earningsStartDate;
-				NSArray *earnings = [Earning fetchAllInManagedObjectContext:managedObjectContext forRegion:region fromDate:balanceStartDate toDate:balanceEndDate];
+				NSArray *earnings = [Earning fetchAllInManagedObjectContext:_managedObjectContext forRegion:region fromDate:balanceStartDate toDate:balanceEndDate];
 				if (earnings && [earnings count] > 0) {
 					NSDate *maxToDate = [earnings valueForKeyPath:@"@max.toDate"];
 					
@@ -116,7 +114,7 @@
 					balanceStartDate = [[NSCalendar currentCalendar] dateByAddingComponents:balanceStartDateComponents toDate:maxToDate options:0];
 				}
 				
-				NSArray *balanceSales = [Sale fetchAllInManagedObjectContext:managedObjectContext forRegion:region startDate:balanceStartDate endDate:targetDate];
+				NSArray *balanceSales = [Sale fetchAllInManagedObjectContext:_managedObjectContext forRegion:region startDate:balanceStartDate endDate:targetDate];
 				if ([balanceSales count] > 0) {
 					balanceTotal = [balanceSales valueForKeyPath:@"@sum.total"];
 				}
@@ -156,7 +154,7 @@
 				if ([deposit compare:[NSDecimalNumber zero]] != NSOrderedSame) {
 					// deposit is not zero, create a new earning or edit an existing one
 					
-					Region *region = [Region fetchInManagedObjectContext:managedObjectContext withId:regionId];
+					Region *region = [Region fetchInManagedObjectContext:_managedObjectContext withId:regionId];
 					
 					NSDateComponents *balanceEndDateComponents = [[[NSDateComponents alloc] init] autorelease];
 					balanceEndDateComponents.month = -1;
@@ -164,7 +162,7 @@
 					
 					NSDate *balanceStartDate = earningsStartDate;
 					
-					NSArray *earnings = [Earning fetchAllInManagedObjectContext:managedObjectContext forRegion:region fromDate:[NSDate distantPast] toDate:balanceEndDate];
+					NSArray *earnings = [Earning fetchAllInManagedObjectContext:_managedObjectContext forRegion:region fromDate:[NSDate distantPast] toDate:balanceEndDate];
 					if (earnings && [earnings count] > 0) {
 						NSDate *maxToDate = [earnings valueForKeyPath:@"@max.toDate"];
 						
@@ -178,10 +176,10 @@
 						rate = [deposit decimalNumberByDividingBy:subtotal];
 					}
 					
-					Earning *earning = [Earning fetchInManagedObjectContext:managedObjectContext forRegion:region onDate:targetDate];
+					Earning *earning = [Earning fetchInManagedObjectContext:_managedObjectContext forRegion:region onDate:targetDate];
 					if (! earning) {
 						// create new earning
-						earning = [NSEntityDescription insertNewObjectForEntityForName:@"Earning" inManagedObjectContext:managedObjectContext];
+						earning = [NSEntityDescription insertNewObjectForEntityForName:@"Earning" inManagedObjectContext:_managedObjectContext];
 					}
 					
 					earning.Region = region;
@@ -202,10 +200,10 @@
 				}
 				else {
 					// deposit is zero, remove any existing earnings
-					Region *region = [Region fetchInManagedObjectContext:managedObjectContext withId:regionId];
-					Earning *earning = [Earning fetchInManagedObjectContext:managedObjectContext forRegion:region onDate:targetDate];
+					Region *region = [Region fetchInManagedObjectContext:_managedObjectContext withId:regionId];
+					Earning *earning = [Earning fetchInManagedObjectContext:_managedObjectContext forRegion:region onDate:targetDate];
 					if (earning) {
-						[managedObjectContext deleteObject:earning];
+						[_managedObjectContext deleteObject:earning];
 						DebugLog(@"%s removed earning in %@", __PRETTY_FUNCTION__, region.id);
 					}
 				}
@@ -219,7 +217,7 @@
 	}
 	
 #if DO_UNDO
-	[managedObjectContext processPendingChanges];
+	[_managedObjectContext processPendingChanges];
 	[undoManager endUndoGrouping];
 	[undoManager setActionName:@"Import Deposits"];
 #endif
