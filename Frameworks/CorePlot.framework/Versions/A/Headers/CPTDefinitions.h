@@ -31,6 +31,9 @@
 #define CPT_SDK_SUPPORTS_WEAK 0
 #endif
 
+// manual reference counting no longer supports __weak
+#define CPT_SDK_SUPPORTS_WEAK 0
+
 #if CPT_SDK_SUPPORTS_WEAK
 #define __cpt_weak		  __weak
 #define cpt_weak_property weak

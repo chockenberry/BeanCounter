@@ -28,8 +28,8 @@
 	NSNumberFormatter *_percentFormatter;
 	NSDateFormatter *_dateFormatter;
 	
-	__weak NSPersistentStoreCoordinator *_persistentStoreCoordinator; // weak reference
-	__weak NSObject <RegionSalesReportOperationDelegate> *_delegate; // weak reference
+	NSPersistentStoreCoordinator *_persistentStoreCoordinator; // weak reference
+	NSObject <RegionSalesReportOperationDelegate> *_delegate; // weak reference
 }
 
 @property (nonatomic, assign) NSUInteger reportCategory;

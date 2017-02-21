@@ -66,10 +66,8 @@
 	NSDate *importStart = [NSDate date];
 #endif
 	
-	NSManagedObjectContext *managedObjectContext = _managedObjectContext;
-
 #if DO_UNDO
-	NSUndoManager *undoManager = [managedObjectContext undoManager];
+	NSUndoManager *undoManager = [_managedObjectContext undoManager];
 	[undoManager beginUndoGrouping];
 #endif
 	
@@ -90,10 +88,10 @@
 		NSString *reportRegionId = reportDatum.regionId;
 		NSString *regionName = [internationalInfo regionNameForId:reportRegionId];
 		if (regionName) {
-			Region *region = [Region fetchInManagedObjectContext:managedObjectContext withId:reportRegionId];
+			Region *region = [Region fetchInManagedObjectContext:_managedObjectContext withId:reportRegionId];
 			if (! region) {
 				
-				region = [NSEntityDescription insertNewObjectForEntityForName:@"Region" inManagedObjectContext:managedObjectContext];
+				region = [NSEntityDescription insertNewObjectForEntityForName:@"Region" inManagedObjectContext:_managedObjectContext];
 				region.id = reportRegionId;
 				region.name = regionName;
 				region.currency = [internationalInfo regionCurrencyForId:reportRegionId];
@@ -106,9 +104,9 @@
 			}
 			
 			// create the Product entity if needed
-			Product *product = [Product fetchInManagedObjectContext:managedObjectContext withAppleId:reportDatum.appleIdentifier];
+			Product *product = [Product fetchInManagedObjectContext:_managedObjectContext withAppleId:reportDatum.appleIdentifier];
 			if (! product) {
-				product = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:managedObjectContext];
+				product = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:_managedObjectContext];
 				product.appleId = reportDatum.appleIdentifier;
 				product.color = [[ColorPalette sharedColorPalette] nextColor];
 				product.name = reportDatum.productName;
@@ -124,7 +122,7 @@
 			}
 			
 			// add the Sale entity
-			Sale *sale = [NSEntityDescription insertNewObjectForEntityForName:@"Sale" inManagedObjectContext:managedObjectContext];
+			Sale *sale = [NSEntityDescription insertNewObjectForEntityForName:@"Sale" inManagedObjectContext:_managedObjectContext];
 			sale.date = reportDatum.periodDate;
 			sale.amount = reportDatum.partnerShare;
 			sale.quantity = reportDatum.quantity;
@@ -162,7 +160,7 @@
 	[_delegate performSelectorOnMainThread:@selector(reportImporterOperationProcessedItem:) withObject:self waitUntilDone:YES];
 
 #if DO_UNDO
-	[managedObjectContext processPendingChanges];
+	[_managedObjectContext processPendingChanges];
 	[undoManager endUndoGrouping];
 	[undoManager setActionName:@"Import Report"];
 #endif
