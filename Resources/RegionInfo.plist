@@ -237,6 +237,15 @@
 		<key>currencySymbol</key>
 		<string>฿</string>
 	</dict>
+    <key>MY</key>
+    <dict>
+        <key>name</key>
+        <string>Malaysia</string>
+        <key>currency</key>
+        <string>MYR</string>
+        <key>currencySymbol</key>
+        <string>MYR</string>
+    </dict>
 
 </dict>
 </plist>
