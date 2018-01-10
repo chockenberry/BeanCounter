@@ -19,7 +19,6 @@
 
 #import "DebugLog.h"
 
-
 static NSString *const accountFileName = @"account.db";
 static NSString *const settingsFileName = @"settings.plist";
 
@@ -69,6 +68,8 @@ static NSString *const settingsFileName = @"settings.plist";
 				nil] retain];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sourceListViewChanged:) name:SourceListViewChangedNotification object:_sourceListViewController];
+		
+//		self.managedObjectContext.retainsRegisteredObjects = YES;
 	}
 	
 	return self;
@@ -179,7 +180,7 @@ static NSString *const settingsFileName = @"settings.plist";
 
 - (void)setFileURL:(NSURL *)fileURL
 {	
-    NSURL *originalFileURL = [self storeURLFromFileURL:self.fileURL];
+    NSURL *originalFileURL = [self storeURLFromFileURL:fileURL];
     if (originalFileURL != nil) {
         NSPersistentStoreCoordinator *persistentStoreCoordinator = [self.managedObjectContext persistentStoreCoordinator];
         NSPersistentStore *persistentStore = [persistentStoreCoordinator persistentStoreForURL:originalFileURL];
@@ -188,7 +189,8 @@ static NSString *const settingsFileName = @"settings.plist";
             [persistentStoreCoordinator setURL:[self storeURLFromFileURL:fileURL] forPersistentStore:persistentStore];
         }
     }
-    [self simpleSetFileURL:fileURL];
+//    [self simpleSetFileURL:fileURL];
+	[super setFileURL:fileURL];
 }
 
 
@@ -203,6 +205,7 @@ static NSString *const settingsFileName = @"settings.plist";
 
     return result;
 }
+
 
 #pragma mark - Overrides
 
@@ -371,7 +374,7 @@ static NSString *const settingsFileName = @"settings.plist";
 	
 	if (saveOperation == NSSaveAsOperation) {
 		// saving as a new document, first setup the directory
-		fileWrapper = [[[NSFileWrapper alloc] initDirectoryWithFileWrappers:nil] autorelease];
+		fileWrapper = [[[NSFileWrapper alloc] initDirectoryWithFileWrappers:@{}] autorelease];
 		BOOL success = [fileWrapper writeToURL:absoluteURL options:NSFileWrapperWritingAtomic originalContentsURL:nil error:error];
 		if (! success) {
 			ReleaseLog(@"%s Cannot write file wrapper for directory, error = %@", __PRETTY_FUNCTION__, *error);
@@ -423,6 +426,12 @@ static NSString *const settingsFileName = @"settings.plist";
 			result = NO;
 		}
 	}
+
+	if (result) {
+		// save the persistent store in the file wrapper
+		result = [[self managedObjectContext] save:error];
+	}
+	
 	
 	if (result) {
 		// update the file wrapper (writing data other than the persistent store)
@@ -434,11 +443,6 @@ static NSString *const settingsFileName = @"settings.plist";
 		}
 	}
 	
-    if (result) {
-        // save the persistent store in the file wrapper
-        result = [[self managedObjectContext] save:error];
-    }
-    
 	if (result) {
         // set the appropriate file attributes (such as hiding the file extension)
         NSDictionary *fileAttributes = [self fileAttributesToWriteToURL:absoluteURL ofType:typeName forSaveOperation:saveOperation originalContentsURL:originalURL error:NULL];
