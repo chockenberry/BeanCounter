@@ -403,5 +403,23 @@
 		<key>currencySymbol</key>
 		<string>TSh</string>
 	</dict>
+	<key>BR</key>
+	<dict>
+		<key>name</key>
+		<string>Brazil</string>
+		<key>currency</key>
+		<string>BRL</string>
+		<key>currencySymbol</key>
+		<string>R$</string>
+	</dict>
+	<key>KR</key>
+	<dict>
+		<key>name</key>
+		<string>Korea</string>
+		<key>currency</key>
+		<string>KRW</string>
+		<key>currencySymbol</key>
+		<string>₩</string>
+	</dict>
 </dict>
 </plist>
