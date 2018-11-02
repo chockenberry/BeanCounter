@@ -15,6 +15,7 @@
 				<th class="units">Units</th>
 				<th class="sales">Sales</th>
 				<th class="earnings">Earnings</th>
+				<th class="percentage"></th>
 			</tr>
 		{% for productData in categoryData.productArray %}
 			<tr class="summary">
@@ -22,6 +23,7 @@
 				<td class="units">{{ productData.unitsSummaryFormatted }}</td>
 				<td class="sales">{{ productData.salesSummaryFormatted }}</td>
 				<td class="earnings">{{ productData.earningsSummaryFormatted }}</td>
+				<td class="percentage">{{ productData.earningsPercentageFormatted }}</td>
 			</tr>
 		{% /for %}
 			<tr class="total">
@@ -29,6 +31,7 @@
 				<td class="units">{{ categoryData.categoryUnitsTotalFormatted }}</td>
 				<td class="sales">{{ categoryData.categorySalesTotalFormatted }}</td>
 				<td class="earnings">{{ categoryData.categoryEarningsTotalFormatted }}</td>
+				<td class="percentage"></td>
 			</tr>
 		</table>
 {% /for %}

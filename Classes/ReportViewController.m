@@ -244,6 +244,11 @@
 
 #pragma mark - Overrides
 
+- (BOOL)usesAllControls
+{
+	return YES;
+}
+
 - (NSString *)reportTemplatePath
 {
 	return nil;

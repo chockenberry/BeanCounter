@@ -91,25 +91,6 @@
 #define USE_COUNTS 0
 #define USE_EXPRESSIONS 0
 
-//- (NSDictionary *)createSalesDictionaryInCountry:(NSString *)country withAmount:(NSDecimalNumber *)amount units:(NSNumber *)units totalUnits:(NSNumber *)totalUnits
-//{
-//	NSDecimalNumber *unitsValue = [NSDecimalNumber decimalNumberWithDecimal:[units decimalValue]];
-//	NSDecimalNumber *totalUnitsValue = [NSDecimalNumber decimalNumberWithDecimal:[totalUnits decimalValue]];
-//	NSDecimalNumber *unitPercentage = [unitsValue decimalNumberByDividingBy:totalUnitsValue];
-//
-//	NSDecimalNumber *totalValue = [amount decimalNumberByMultiplyingBy:unitsValue];
-//
-//	NSString *unitsDetailFormatted = [NSString stringWithFormat:@"%@ @ %@", [_unitsFormatter stringFromNumber:units], [_salesFormatter stringFromNumber:amount]];
-//	NSString *salesDetailFormatted = [_salesFormatter stringFromNumber:totalValue];
-//	NSString *countryDetailFormatted = country;
-//	NSString *percentageDetailFormatted = [_percentFormatter stringFromNumber:unitPercentage];
-//
-//	NSDictionary *salesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:unitsDetailFormatted, @"unitsDetailFormatted", salesDetailFormatted, @"salesDetailFormatted", countryDetailFormatted, @"countryDetailFormatted", percentageDetailFormatted, @"percentageDetailFormatted", units, @"units", totalValue, @"totalValue", nil];
-//
-//	return salesDictionary;
-//}
-
-// KEEP
 - (NSDictionary *)createProductDictionaryForRegion:(Region *)region withProduct:(Product *)product fromStartDate:(NSDate *)startDate toEndDate:(NSDate *)endDate
 {
 	NSDictionary *result = nil;
@@ -119,13 +100,11 @@
 		NSNumber *unitsSummary = [sales valueForKeyPath:@"@sum.quantity"];
 		NSDecimalNumber *salesSummary = [sales valueForKeyPath:@"@sum.total"];
 		NSDecimalNumber *earningsSummary = [NSDecimalNumber zero];
+		NSDecimalNumber *earningsPercentage = [NSDecimalNumber zero];
 
 		// check the quantity sum: it can be 0 because of sales (+1) that are refunded (-1)
 		if ([unitsSummary integerValue] != 0) {
-			
 			Earning *earning = [Earning fetchInManagedObjectContext:managedObjectContext forRegion:region onDate:startDate]; // use earnings that may have occured in the future
-			
-			NSDecimalNumber *earningsSummary = nil;
 			if (earning) {
 				if ([earning.adjustments isEqual:[NSDecimalNumber zero]]) {
 					earningsSummary = [salesSummary decimalNumberByMultiplyingBy:earning.rate];
@@ -137,6 +116,8 @@
 					NSDecimalNumber *adjustedRate = [earning.deposit decimalNumberByDividingBy:allSalesSummary];
 					earningsSummary = [salesSummary decimalNumberByMultiplyingBy:adjustedRate];
 				}
+				
+				earningsPercentage = [earningsSummary decimalNumberByDividingBy:earning.deposit];
 			}
 
 
@@ -148,11 +129,13 @@
 			NSString *unitsSummaryFormatted = [_unitsFormatter stringFromNumber:unitsSummary];
 			NSString *salesSummaryFormatted = [_salesFormatter stringFromNumber:salesSummary];
 			NSString *earningsSummaryFormatted = [_earningsFormatter stringFromNumber:earningsSummary];
+			NSString *earningsPercentageFormatted = [_percentFormatter stringFromNumber:earningsPercentage];
 
 			result = [NSDictionary dictionaryWithObjectsAndKeys:product, @"product",
 					unitsSummary, @"unitsSummary", unitsSummaryFormatted, @"unitsSummaryFormatted",
 					salesSummary, @"salesSummary", salesSummaryFormatted, @"salesSummaryFormatted",
 					earningsSummary, @"earningsSummary", earningsSummaryFormatted, @"earningsSummaryFormatted",
+					earningsPercentage, @"earningsPercentage", earningsPercentageFormatted, @"earningsPercentageFormatted",
 					nil];
 		}
 	}
@@ -160,60 +143,6 @@
 	return result;
 }
 
-//- (NSArray *)createProductArrayForRegion:(Region *)region withProducts:(NSArray *)products fromStartDate:(NSDate *)startDate toEndDate:(NSDate *)endDate summaryVariables:(NSMutableDictionary *)summaryVariables
-//{
-//	NSMutableArray *productArray = [NSMutableArray array];
-//
-//	NSNumber *unitsTotal = [NSNumber numberWithInteger:0];
-//	NSDecimalNumber *salesTotal = [NSDecimalNumber zero];
-//
-//	for (Product *product in products) {
-//		NSDictionary *productDictionary = [self createProductDictionaryForRegion:region withProduct:product fromStartDate:startDate toEndDate:endDate];
-//		if (productDictionary) {
-//			NSNumber *unitsSummary = [productDictionary objectForKey:@"unitsSummary"];
-//			NSDecimalNumber *salesSummary = [productDictionary objectForKey:@"salesSummary"];
-//
-//			if ([unitsSummary compare:[NSDecimalNumber zero]] == NSOrderedDescending) {
-//				// unitsSummary > 0
-//				unitsTotal = [NSNumber numberWithInteger:([unitsTotal integerValue] + [unitsSummary integerValue])];
-//				salesTotal = [salesTotal decimalNumberByAdding:salesSummary];
-//
-//				[productArray addObject:productDictionary];
-//			}
-//		}
-//	}
-//
-//	[summaryVariables setObject:unitsTotal forKey:@"unitsTotal"];
-//	[summaryVariables setObject:salesTotal forKey:@"salesTotal"];
-//
-//	return [NSArray arrayWithArray:productArray];
-//}
-
-//- (NSDictionary *)createRegionDictionaryForRegion:(Region *)region withProducts:(NSArray *)products fromStartDate:(NSDate *)startDate toEndDate:(NSDate *)endDate
-//{
-//	NSDictionary *result = nil;
-//
-//	NSMutableDictionary *summaryVariables = [NSMutableDictionary dictionary];
-//	NSArray *productArray = [self createProductArrayForRegion:region withProducts:products fromStartDate:startDate toEndDate:endDate summaryVariables:summaryVariables];
-//	if (productArray && [productArray count] > 0) {
-//		NSNumber *unitsTotal = [summaryVariables objectForKey:@"unitsTotal"];
-//		NSNumber *salesTotal = [summaryVariables objectForKey:@"salesTotal"];
-//
-//		InternationalInfo *internationalInfoManager = [InternationalInfo sharedInternationalInfo];
-//		_salesFormatter.currencySymbol = [internationalInfoManager regionCurrencySymbolForId:region.id];
-//		_salesFormatter.maximumFractionDigits = [internationalInfoManager regionCurrencyDigitsForId:region.id];
-//		_salesFormatter.minimumFractionDigits = [internationalInfoManager regionCurrencyDigitsForId:region.id];
-//
-//		NSString *unitsTotalFormatted = [_unitsFormatter stringFromNumber:unitsTotal];
-//		NSString *salesTotalFormatted = [_salesFormatter stringFromNumber:salesTotal];
-//
-//		result = [NSDictionary dictionaryWithObjectsAndKeys:region, @"region", productArray, @"productArray", unitsTotal, @"unitsTotal", unitsTotalFormatted, @"unitsTotalFormatted", salesTotal, @"salesTotal", salesTotalFormatted, @"salesTotalFormatted", nil];
-//	}
-//
-//	return result;
-//}
-
-// KEEP
 - (NSArray *)createProductArrayWithRegion:(Region *)region fromStartDate:(NSDate *)startDate toEndDate:(NSDate *)endDate summaryVariables:(NSMutableDictionary *)summaryVariables
 {
 	NSArray *result = nil;
@@ -251,7 +180,6 @@
 	return result;
 }
 
-// KEEP
 - (NSDictionary *)createCategoryDictionaryWithRegion:(Region *)region fromStartDate:(NSDate *)startDate toEndDate:(NSDate *)endDate
 {
 	NSDictionary *result = nil;
@@ -320,7 +248,7 @@
 		NSDictionary *categoryDictionary = [self createCategoryDictionaryWithRegion:region fromStartDate:reportStartDate toEndDate:reportEndDate];
 		if (categoryDictionary) {
 			NSNumber *categoryUnitsTotal = [categoryDictionary objectForKey:@"categoryUnitsTotal"];
-			NSDecimalNumber *categorySalesTotal = [categoryDictionary objectForKey:@"categorySalesTotal"];
+			//NSDecimalNumber *categorySalesTotal = [categoryDictionary objectForKey:@"categorySalesTotal"];
 			NSDecimalNumber *categoryEarningsTotal = [categoryDictionary objectForKey:@"categoryEarningsTotal"];
 			grandUnitsTotal = [NSNumber numberWithInteger:([grandUnitsTotal integerValue] + [categoryUnitsTotal integerValue])];
 			grandEarningsTotal = [grandEarningsTotal decimalNumberByAdding:categoryEarningsTotal];

@@ -52,6 +52,12 @@
 
 #pragma mark - Overrides
 
+- (BOOL)usesAllControls
+{
+	return NO;
+}
+
+
 - (NSString *)reportTemplatePath
 {
 	return [[NSBundle mainBundle] pathForResource:@"regionEarningsReport" ofType:@"html"];

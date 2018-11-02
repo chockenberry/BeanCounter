@@ -70,6 +70,13 @@
 	[self updateFilterPopUpButton];
 }
 
+- (void)viewDidAppear
+{
+	if (self.graphHostingView.window) {
+		self.graphHostingView.hostedGraph.contentsScale = self.graphHostingView.window.backingScaleFactor;
+	}
+}
+
 #pragma mark - KVO
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

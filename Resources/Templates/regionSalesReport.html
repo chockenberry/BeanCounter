@@ -16,7 +16,7 @@
 	{% for regionData in categoryData.regionArray %}
 		<table>
 			<tr class="header">
-				<th class="product" colspan="2">{{ regionData.region.name }}</th>
+				<th class="productregion" colspan="2">{{ regionData.region.name }}</th>
 				<th class="sales">Sales</th>
 				<th class="units">Units</th>
 				<th class="country"></th>
@@ -24,8 +24,7 @@
 			</tr>
 		{% for productData in regionData.productArray %}
 			<tr class="summary">
-				<td class="product"></td>
-				<td class="region">{{ productData.product.name }}</td>
+				<td class="regionproduct" colspan="2">{{ productData.product.name }}</td>
 				<td class="sales">{{ productData.salesSummaryFormatted }}</td>
 				<td class="units">{{ productData.unitsSummaryFormatted }}</td>
 				<td class="country"></td>
@@ -33,8 +32,7 @@
 			</tr>
 			{% for salesData in productData.salesArray %}
 			<tr class="detail">
-				<td class="product"></td>
-				<td class="region"></td>
+				<td class="regionproduct" colspan="2"></td>
 				<td class="sales">{{ salesData.salesDetailFormatted }}</td>
 				<td class="units">{{ salesData.unitsDetailFormatted }}</td>
 				<td class="country">{{ salesData.countryDetailFormatted }}</td>
@@ -43,8 +41,7 @@
 			{% /for %}
 		{% /for %}
 			<tr class="total">
-				<td class="product"></td>
-				<td class="region">Total</td>
+				<td class="regionproduct" colspan="2">Total</td>
 				<td class="sales">{{ regionData.salesTotalFormatted }}</td>
 				<td class="units">{{ regionData.unitsTotalFormatted }}</td>
 				<td class="country"></td>

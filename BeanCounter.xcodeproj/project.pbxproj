@@ -1092,7 +1092,7 @@
 				GCC_PREFIX_HEADER = BeanCounter_Prefix.pch;
 				INFOPLIST_FILE = "BeanCounter-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = BeanCounter;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -1117,7 +1117,7 @@
 				GCC_PREFIX_HEADER = BeanCounter_Prefix.pch;
 				INFOPLIST_FILE = "BeanCounter-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_NAME = BeanCounter;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
