@@ -23,6 +23,7 @@ td {
 
 tr.header th {
 	font-weight: 500;
+	border-bottom: 1px solid #aaa;
 }
 
 tr.header {
