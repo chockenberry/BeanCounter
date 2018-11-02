@@ -233,12 +233,10 @@
 	result = [Sale fastMinimumDateInManagedObjectContext:self.managedObjectContext];
 #endif
 	
-	if (chartPeriod == 1) {
-		// if chart period is a year, move the date to the beginning of the year
-		NSDateComponents *normalizedDateComponents = [[NSCalendar currentCalendar] components:(NSCalendarUnitMonth | NSCalendarUnitYear) fromDate:result];
-		normalizedDateComponents.month = 1;
-		result = [[NSCalendar currentCalendar] dateFromComponents:normalizedDateComponents];
-	}
+	// move the date to the beginning of the year
+	NSDateComponents *normalizedDateComponents = [[NSCalendar currentCalendar] components:(NSCalendarUnitMonth | NSCalendarUnitYear) fromDate:result];
+	normalizedDateComponents.month = 1;
+	result = [[NSCalendar currentCalendar] dateFromComponents:normalizedDateComponents];
 	
 	return result;
 }
@@ -412,14 +410,35 @@
 	CPTGraph *graph = [[[CPTXYGraph alloc] initWithFrame:bounds] autorelease];
 	self.graphHostingView.hostedGraph = graph;
 	
-	[graph applyTheme:[CPTTheme themeNamed:kCPTDarkGradientTheme]];
+	[graph applyTheme:[CPTTheme themeNamed:kCPTPlainBlackTheme]];
+
+	// line styles
+	CPTMutableLineStyle *majorLineStyle = [CPTMutableLineStyle lineStyle];
+	majorLineStyle.lineWidth = 1.0f;
+	majorLineStyle.lineColor = [[CPTColor whiteColor] colorWithAlphaComponent:0.75];
+	
+	CPTMutableLineStyle *minorLineStyle = [CPTMutableLineStyle lineStyle];
+	minorLineStyle.lineWidth = 1.0f;
+	minorLineStyle.lineColor = [[CPTColor whiteColor] colorWithAlphaComponent:0.25];
+	
+	CPTMutableLineStyle *clearLineStyle = [CPTMutableLineStyle lineStyle];
+	clearLineStyle.lineWidth = 1.0f;
+	clearLineStyle.lineColor = [CPTColor clearColor];
+	
+	CPTMutableLineStyle *brightLineStyle = [CPTMutableLineStyle lineStyle];
+	brightLineStyle.lineWidth = 1.0f;
+	brightLineStyle.lineColor = [[CPTColor whiteColor] colorWithAlphaComponent:0.25];
+	
+	CPTMutableLineStyle *dimLineStyle = [CPTMutableLineStyle lineStyle];
+	dimLineStyle.lineWidth = 1.0f;
+	dimLineStyle.lineColor = [[CPTColor whiteColor] colorWithAlphaComponent:0.1];
 	
 	// title
 	{
 		graph.title = [self chartTitleInRegion:region];
 		CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
-		textStyle.color = [CPTColor grayColor];
-		textStyle.fontName = @"HelveticaNeue-CondensedBold";
+		textStyle.color = [CPTColor lightGrayColor];
+		textStyle.fontName = [NSFont systemFontOfSize:20.0f weight:NSFontWeightMedium].fontName;
 		textStyle.fontSize = 20.0f;
 		graph.titleTextStyle = textStyle;
 		graph.titleDisplacement = CGPointMake(0.0f, 20.0f);
@@ -446,9 +465,11 @@
 	// plot frame
 	{
 		graph.plotAreaFrame.paddingTop = 20.0;
-		graph.plotAreaFrame.paddingRight = 200.0;
-		graph.plotAreaFrame.paddingBottom = 100.0;
+		graph.plotAreaFrame.paddingRight = 250.0;
+		graph.plotAreaFrame.paddingBottom = 50.0;
 		graph.plotAreaFrame.paddingLeft = 100.0;
+		
+		graph.plotAreaFrame.borderLineStyle = clearLineStyle;
 	}
 	
 	// initial plot space
@@ -459,37 +480,34 @@
 		[graph addPlotSpace:plotSpace];
 	}
 	
-	// line styles
-	CPTMutableLineStyle *majorLineStyle = [CPTMutableLineStyle lineStyle];
-	majorLineStyle.lineWidth = 1.0f;
-	majorLineStyle.lineColor = [[CPTColor whiteColor] colorWithAlphaComponent:0.75];
-	
-	CPTMutableLineStyle *minorLineStyle = [CPTMutableLineStyle lineStyle];
-	minorLineStyle.lineWidth = 1.0f;
-	minorLineStyle.lineColor = [[CPTColor whiteColor] colorWithAlphaComponent:0.25];    
-	
-	CPTMutableLineStyle *clearLineStyle = [CPTMutableLineStyle lineStyle];
-	clearLineStyle.lineWidth = 1.0f;
-	clearLineStyle.lineColor = [CPTColor clearColor];    
-	
 	// axes
 	{
 		CPTXYAxisSet *axisSet = (CPTXYAxisSet *)graph.axisSet;
 		
 		CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
 		textStyle.color = [CPTColor grayColor];
-		textStyle.fontName = @"HelveticaNeue-Light";
-		textStyle.fontSize = 13.0f;
+		textStyle.fontName = [NSFont systemFontOfSize:12.0f weight:NSFontWeightLight].fontName;
+		textStyle.fontSize = 12.0f;
 		
 		CPTXYAxis *x = axisSet.xAxis;
 		{
 			x.orthogonalCoordinateDecimal = CPTDecimalFromInteger(0);
 			
-			x.majorIntervalLength = CPTDecimalFromInteger(1);
-			x.minorTicksPerInterval = 0;
+			if (chartPeriod == 1) {
+				// year
+				x.majorIntervalLength = CPTDecimalFromInteger(1);
+				x.minorTicksPerInterval = 0;
+				x.majorGridLineStyle = clearLineStyle;
+				x.minorGridLineStyle = clearLineStyle;
+			}
+			else {
+				// month
+				x.majorIntervalLength = CPTDecimalFromInteger(12);
+				x.minorTicksPerInterval = 3;
+				x.majorGridLineStyle = brightLineStyle;
+				x.minorGridLineStyle = dimLineStyle;
+			}
 			
-			x.majorGridLineStyle = clearLineStyle;
-			x.minorGridLineStyle = minorLineStyle;
 			x.axisLineStyle = nil;
 			x.majorTickLineStyle = nil;
 			x.minorTickLineStyle = nil;
@@ -499,12 +517,7 @@
 			x.labelTextStyle = textStyle;
 			
 			NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-			if (chartPeriod == 1) {
-				dateFormatter.dateFormat = @"yyyy";
-			}
-			else {
-				dateFormatter.dateFormat = @"MMM yyyy";
-			}
+			dateFormatter.dateFormat = @"yyyy";
 			CPTCalendarFormatter *calendarFormatter = [[[CPTCalendarFormatter alloc] initWithDateFormatter:dateFormatter] autorelease];
 			calendarFormatter.referenceDate = earliestDate;
 			calendarFormatter.referenceCalendarUnit = [self calendarUnitForChartPeriod:chartPeriod];
@@ -544,7 +557,7 @@
 	if (chartShowTotal) {
 		CPTBarPlot *barPlot = [[[CPTBarPlot alloc] init] autorelease];
 		barPlot.lineStyle = clearLineStyle;
-		barPlot.fill = [CPTFill fillWithColor:[CPTColor colorWithComponentRed:1.0f green:1.0f blue:1.0f alpha:0.15f]];
+		barPlot.fill = [CPTFill fillWithColor:[CPTColor colorWithComponentRed:1.0f green:1.0f blue:1.0f alpha:0.25f]];
 		barPlot.barBasesVary = NO;
 		barPlot.barWidth = CPTDecimalFromFloat(1.0); // percentage of the available space
 		barPlot.barCornerRadius = 0.0f;
@@ -694,12 +707,12 @@
 	{
 		CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
 		textStyle.color = [CPTColor grayColor];
-		textStyle.fontName = @"HelveticaNeue-Light";
-		textStyle.fontSize = 13.0f;
+		textStyle.fontName = [NSFont systemFontOfSize:10.0f weight:NSFontWeightLight].fontName;
+		textStyle.fontSize = 10.0f;
 		
 		CPTLegend *legend = [CPTLegend legendWithGraph:graph];
 		legend.numberOfRows = plotCount;
-		legend.fill = [CPTFill fillWithColor:[CPTColor colorWithGenericGray:0.15]];
+		legend.fill = [CPTFill fillWithColor:[CPTColor colorWithGenericGray:0.10]];
 		legend.borderLineStyle = minorLineStyle;
 		legend.cornerRadius = 0.0;
 		legend.swatchSize = CGSizeMake(10.0, 10.0);
