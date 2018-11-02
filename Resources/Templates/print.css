@@ -33,7 +33,7 @@ tr.detail {
 	color: #666;
 }
 tr.summary {
-	font-style: italic;
+/*	font-style: italic;*/
 }
 tr.total {
 	font-weight: bold;
