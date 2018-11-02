@@ -28,33 +28,8 @@
                         <nil key="identifier"/>
                     </webPreferences>
                 </webView>
-                <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="5" userLabel="Pop Up Button (reportPeriod)">
-                    <rect key="frame" x="17" y="352" width="100" height="26"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <popUpButtonCell key="cell" type="push" title="Quarter" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" imageScaling="proportionallyDown" inset="2" selectedItem="30" id="28">
-                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="menu"/>
-                        <menu key="menu" title="OtherViews" id="29">
-                            <items>
-                                <menuItem title="Month" id="31"/>
-                                <menuItem title="Quarter" state="on" tag="1" id="30"/>
-                                <menuItem title="Year" tag="2" id="32"/>
-                                <menuItem title="All" tag="3" id="62"/>
-                            </items>
-                        </menu>
-                    </popUpButtonCell>
-                    <connections>
-                        <action selector="generateReport:" target="-2" id="57"/>
-                        <binding destination="-2" name="hidden" keyPath="usesAllControls" id="vPm-rs-Sr0">
-                            <dictionary key="options">
-                                <string key="NSValueTransformerName">NSNegateBoolean</string>
-                            </dictionary>
-                        </binding>
-                        <binding destination="-2" name="selectedTag" keyPath="settings.reportPeriod" id="104"/>
-                    </connections>
-                </popUpButton>
                 <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="6" userLabel="Pop Up Button (reportMonth)">
-                    <rect key="frame" x="119" y="352" width="123" height="26"/>
+                    <rect key="frame" x="18" y="352" width="123" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="push" title="December" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="12" imageScaling="proportionallyDown" inset="2" selectedItem="17" id="14">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -82,7 +57,7 @@
                     </connections>
                 </popUpButton>
                 <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="7" userLabel="Pop Up Button (reportYear)">
-                    <rect key="frame" x="244" y="352" width="73" height="26"/>
+                    <rect key="frame" x="144" y="352" width="73" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="push" title="2008" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="2008" imageScaling="proportionallyDown" inset="2" selectedItem="11" id="8">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -104,7 +79,7 @@
                     </connections>
                 </popUpButton>
                 <button imageHugsTitle="YES" id="42" userLabel="Check Box (reportShowDetails)">
-                    <rect key="frame" x="320" y="357" width="66" height="18"/>
+                    <rect key="frame" x="323" y="357" width="66" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Details" bezelStyle="regularSquare" imagePosition="leading" alignment="left" state="on" inset="2" id="43">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -121,7 +96,7 @@
                     </connections>
                 </button>
                 <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="66">
-                    <rect key="frame" x="495" y="352" width="100" height="26"/>
+                    <rect key="frame" x="494" y="352" width="100" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="push" title="Group" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" imageScaling="proportionallyDown" inset="2" selectedItem="71" id="67">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -173,6 +148,31 @@
                     <rect key="frame" x="384" y="152" width="32" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                 </progressIndicator>
+                <popUpButton verticalHuggingPriority="750" imageHugsTitle="YES" id="5" userLabel="Pop Up Button (reportPeriod)">
+                    <rect key="frame" x="220" y="352" width="100" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" title="Quarter" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="1" imageScaling="proportionallyDown" inset="2" selectedItem="30" id="28">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" title="OtherViews" id="29">
+                            <items>
+                                <menuItem title="Month" id="31"/>
+                                <menuItem title="Quarter" state="on" tag="1" id="30"/>
+                                <menuItem title="Year" tag="2" id="32"/>
+                                <menuItem title="All" tag="3" id="62"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="generateReport:" target="-2" id="57"/>
+                        <binding destination="-2" name="hidden" keyPath="usesAllControls" id="vPm-rs-Sr0">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                            </dictionary>
+                        </binding>
+                        <binding destination="-2" name="selectedTag" keyPath="settings.reportPeriod" id="104"/>
+                    </connections>
+                </popUpButton>
             </subviews>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="47"/>
