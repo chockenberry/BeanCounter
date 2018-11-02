@@ -25,6 +25,7 @@ NSString *const SourceListReportsItem = @"REPORTS";
 NSString *const SourceListReportsSalesByProductItem = @"Units by Product";
 NSString *const SourceListReportsSalesByRegionItem = @"Sales by Region";
 NSString *const SourceListReportsEarningsByProductItem = @"Earnings by Product";
+NSString *const SourceListReportsEarningsByRegionItem = @"Earnings by Region";
 
 NSString *const SourceListManageItem = @"MANAGE";
 
@@ -52,7 +53,7 @@ static NSArray *sourceListManageItems;
 		sourceListRootItems = [[NSArray arrayWithObjects:SourceListChartsItem, SourceListReportsItem, SourceListManageItem, nil] retain];
 
 		sourceListChartsItems = [[NSArray arrayWithObjects:SourceListChartsProductsItem, SourceListChartsRegionsItem, SourceListChartsEarningsItem, nil] retain];
-		sourceListReportsItems = [[NSArray arrayWithObjects:SourceListReportsSalesByProductItem, SourceListReportsSalesByRegionItem, SourceListReportsEarningsByProductItem, nil] retain];
+		sourceListReportsItems = [[NSArray arrayWithObjects:SourceListReportsSalesByProductItem, SourceListReportsSalesByRegionItem, SourceListReportsEarningsByProductItem, SourceListReportsEarningsByRegionItem, nil] retain];
  		sourceListManageItems = [[NSArray arrayWithObjects:SourceListManageImportReportsItem, SourceListManageReconcileDepositsItem, SourceListManageEditAccountItem, SourceListManageEditProductsItem, SourceListManageEditGroupsItem, SourceListManageEditPartnersItem, nil] retain];
    }
     

@@ -137,10 +137,21 @@
 				
 				NSDecimalNumber *rangeEarningsSummary = nil;
 				if (earning) {
+					NSDecimalNumber *rate = nil;
+					if ([earning.adjustments isEqual:[NSDecimalNumber zero]]) {
+						rate = earning.rate;
+					}
+					else {
+						// compute the adjusted earning rate
+						NSArray *allSales = [Sale fetchAllInManagedObjectContext:managedObjectContext forRegion:region startDate:startDate endDate:endDate];
+						NSDecimalNumber *allSalesSummary = [allSales valueForKeyPath:@"@sum.total"];
+						rate = [earning.deposit decimalNumberByDividingBy:allSalesSummary];
+					}
+
 #if ROUND_DECIMALS
-					rangeEarningsSummary = [rangeSalesSummary decimalNumberByMultiplyingBy:earning.rate withBehavior:_roundingBehavior];
+					rangeEarningsSummary = [rangeSalesSummary decimalNumberByMultiplyingBy:rate withBehavior:_roundingBehavior];
 #else
-					rangeEarningsSummary = [rangeSalesSummary decimalNumberByMultiplyingBy:earning.rate];
+					rangeEarningsSummary = [rangeSalesSummary decimalNumberByMultiplyingBy:rate];
 #endif
 				}
 				else {

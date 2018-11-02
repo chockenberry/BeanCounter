@@ -1,6 +1,6 @@
 body {
 	background-color: white;
-	font-family: Helvetica;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, HelveticaNeue;
 }
 
 table {
@@ -10,7 +10,7 @@ table {
 	margin-top: 20px;
 }
 th {
-	font-size: 14px;
+	font-size: 13px;
 	padding: 4px;
 }
 td {
@@ -19,8 +19,13 @@ td {
 	padding: 2px;
 }
 
+tr.header th {
+	font-weight: 500;
+}
+
 tr.header {
-	color: #600;
+	color: #aa1717;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, HelveticaNeue;
 }
 tr.item {
 }
@@ -40,10 +45,21 @@ tr.total {
 .region {
 	text-align:left;
 }
+.productregion {
+	text-align:left;
+	width: 55%;
+}
+.regionproduct {
+	text-align:right;
+	width: 55%;
+}
 .units {
 	text-align:right;
 }
 .sales {
+	text-align:right;
+}
+.earnings {
 	text-align:right;
 }
 .country {
@@ -70,16 +86,16 @@ td.deposit > span {
 }
 
 tr.header > th {
-	background-color: #e7e7e7;
+	background-color: #f0f0f0;
 }
 tr.product > td {
-	background-color: #d7d7d7;
+	background-color: #f6f6f6;
 }
 tr.summary > td.region {
 	text-align:right;
 }
 tr.summary > td {
-	border-top: 1px solid #666;
+	border-top: 1px solid #f0f0f0;
 }
 tr.total > td.region {
 	text-align:right;

@@ -53,19 +53,22 @@ static NSString *const settingsFileName = @"settings.plist";
 		_sourceListViewController = [[SourceListViewController alloc] initWithNibName:@"SourceListView" bundle:nil];
 
 		_outputViewConfiguration = [[NSDictionary dictionaryWithObjectsAndKeys:
-				[NSDictionary dictionaryWithObjectsAndKeys:@"ProductSalesChartViewController", @"class", @"ChartView", @"nibName", nil], SourceListChartsProductsItem, 
-				[NSDictionary dictionaryWithObjectsAndKeys:@"RegionSalesChartViewController", @"class", @"ChartView", @"nibName", nil], SourceListChartsRegionsItem, 
-				[NSDictionary dictionaryWithObjectsAndKeys:@"ProductEarningsChartViewController", @"class", @"ChartView", @"nibName", nil], SourceListChartsEarningsItem, 
-				[NSDictionary dictionaryWithObjectsAndKeys:@"ProductSalesReportViewController", @"class", @"ReportView", @"nibName", nil], SourceListReportsSalesByProductItem, 
-				[NSDictionary dictionaryWithObjectsAndKeys:@"RegionSalesReportViewController", @"class", @"ReportView", @"nibName", nil], SourceListReportsSalesByRegionItem,
-				[NSDictionary dictionaryWithObjectsAndKeys:@"ProductEarningsReportViewController", @"class", @"ReportView", @"nibName", nil], SourceListReportsEarningsByProductItem,
-				[NSDictionary dictionaryWithObjectsAndKeys:@"ImportViewController", @"class", @"ImportView", @"nibName", nil], SourceListManageImportReportsItem,
-				[NSDictionary dictionaryWithObjectsAndKeys:@"ReconcileViewController", @"class", @"ReconcileView", @"nibName", nil], SourceListManageReconcileDepositsItem,
-				[NSDictionary dictionaryWithObjectsAndKeys:@"EditAccountViewController", @"class", @"EditAccountView", @"nibName", nil], SourceListManageEditAccountItem,
-				[NSDictionary dictionaryWithObjectsAndKeys:@"EditProductsViewController", @"class", @"EditProductsView", @"nibName", nil], SourceListManageEditProductsItem,
-				[NSDictionary dictionaryWithObjectsAndKeys:@"EditGroupsViewController", @"class", @"EditGroupsView", @"nibName", nil], SourceListManageEditGroupsItem,
-				[NSDictionary dictionaryWithObjectsAndKeys:@"EditPartnersViewController", @"class", @"EditPartnersView", @"nibName", nil], SourceListManageEditPartnersItem,
-				nil] retain];
+[NSDictionary dictionaryWithObjectsAndKeys:@"ProductSalesChartViewController", @"class", @"ChartView", @"nibName", nil], SourceListChartsProductsItem,
+[NSDictionary dictionaryWithObjectsAndKeys:@"RegionSalesChartViewController", @"class", @"ChartView", @"nibName", nil], SourceListChartsRegionsItem,
+[NSDictionary dictionaryWithObjectsAndKeys:@"ProductEarningsChartViewController", @"class", @"ChartView", @"nibName", nil], SourceListChartsEarningsItem,
+									 
+[NSDictionary dictionaryWithObjectsAndKeys:@"ProductSalesReportViewController", @"class", @"ReportView", @"nibName", nil], SourceListReportsSalesByProductItem,
+[NSDictionary dictionaryWithObjectsAndKeys:@"RegionSalesReportViewController", @"class", @"ReportView", @"nibName", nil], SourceListReportsSalesByRegionItem,
+[NSDictionary dictionaryWithObjectsAndKeys:@"ProductEarningsReportViewController", @"class", @"ReportView", @"nibName", nil], SourceListReportsEarningsByProductItem,
+[NSDictionary dictionaryWithObjectsAndKeys:@"RegionEarningsReportViewController", @"class", @"ReportView", @"nibName", nil], SourceListReportsEarningsByRegionItem,
+									 
+[NSDictionary dictionaryWithObjectsAndKeys:@"ImportViewController", @"class", @"ImportView", @"nibName", nil], SourceListManageImportReportsItem,
+[NSDictionary dictionaryWithObjectsAndKeys:@"ReconcileViewController", @"class", @"ReconcileView", @"nibName", nil], SourceListManageReconcileDepositsItem,
+[NSDictionary dictionaryWithObjectsAndKeys:@"EditAccountViewController", @"class", @"EditAccountView", @"nibName", nil], SourceListManageEditAccountItem,
+[NSDictionary dictionaryWithObjectsAndKeys:@"EditProductsViewController", @"class", @"EditProductsView", @"nibName", nil], SourceListManageEditProductsItem,
+[NSDictionary dictionaryWithObjectsAndKeys:@"EditGroupsViewController", @"class", @"EditGroupsView", @"nibName", nil], SourceListManageEditGroupsItem,
+[NSDictionary dictionaryWithObjectsAndKeys:@"EditPartnersViewController", @"class", @"EditPartnersView", @"nibName", nil], SourceListManageEditPartnersItem,
+nil] retain];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sourceListViewChanged:) name:SourceListViewChangedNotification object:_sourceListViewController];
 		

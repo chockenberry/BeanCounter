@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<link href="report.css?version=2" media="screen" rel="Stylesheet" type="text/css" />
+		<link href="print.css?version=2" media="print" rel="Stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h2>Region Earnings: {{ reportTitle }}</h2>
+		
+		<!-- TODO: decide if each region should be in its own table or a single table with dividers -->
+		
+{% for categoryData in categoryArray %}
+		<table>
+			<tr class="header">
+				<th class="productregion" colspan="2">{{ categoryData.categoryName }}</th>
+				<th class="units">Units</th>
+				<th class="sales">Sales</th>
+				<th class="earnings">Earnings</th>
+			</tr>
+		{% for productData in categoryData.productArray %}
+			<tr class="summary">
+				<td class="regionproduct" colspan="2">{{ productData.product.name }}</td>
+				<td class="units">{{ productData.unitsSummaryFormatted }}</td>
+				<td class="sales">{{ productData.salesSummaryFormatted }}</td>
+				<td class="earnings">{{ productData.earningsSummaryFormatted }}</td>
+			</tr>
+		{% /for %}
+			<tr class="total">
+				<td class="regionproduct" colspan="2">Total</td>
+				<td class="units">{{ categoryData.categoryUnitsTotalFormatted }}</td>
+				<td class="sales">{{ categoryData.categorySalesTotalFormatted }}</td>
+				<td class="earnings">{{ categoryData.categoryEarningsTotalFormatted }}</td>
+			</tr>
+		</table>
+{% /for %}
+{% if grandUnitsTotalFormatted %}
+		<p><strong>Grand Total Units: {{ grandUnitsTotalFormatted }}</strong></p>
+{% /if %}
+{% if grandEarningsTotalFormatted %}
+<p><strong>Grand Total Earnings: {{ grandEarningsTotalFormatted }}</strong></p>
+{% /if %}
+	</body>
+</html>

@@ -17,6 +17,7 @@ extern NSString *const SourceListChartsEarningsItem;
 extern NSString *const SourceListReportsSalesByProductItem;
 extern NSString *const SourceListReportsSalesByRegionItem;
 extern NSString *const SourceListReportsEarningsByProductItem;
+extern NSString *const SourceListReportsEarningsByRegionItem;
 
 extern NSString *const SourceListManageImportReportsItem;
 extern NSString *const SourceListManageReconcileDepositsItem;

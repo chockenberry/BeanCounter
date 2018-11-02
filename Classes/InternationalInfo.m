@@ -92,8 +92,9 @@ static InternationalInfo *sharedInternationalInfo = nil;
 
 - (NSUInteger)regionCurrencyDigitsForId:(NSString *)regionId
 {
+	NSArray *noDigitRegionIds = @[ @"JP", @"CL", @"ID", @"KR", @"PK", @"TW", @"VN" ];
 	NSUInteger result = 2;
-	if ([regionId isEqualToString:@"JP"]) {
+	if ([noDigitRegionIds containsObject:regionId]) {
 		result = 0;
 	}
 	return result;
