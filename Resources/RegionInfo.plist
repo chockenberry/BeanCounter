@@ -420,5 +420,61 @@
 		<key>currencySymbol</key>
 		<string>₩</string>
 	</dict>
+	
+	<key>B1</key>
+	<dict>
+		<key>name</key>
+		<string>Brazil0056</string>
+		<key>currency</key>
+		<string>BRL</string>
+		<key>currencySymbol</key>
+		<string>R$</string>
+	</dict>
+	<key>C2</key>
+	<dict>
+		<key>name</key>
+		<string>Colombia0056</string>
+		<key>currency</key>
+		<string>COP</string>
+		<key>currencySymbol</key>
+		<string>$</string>
+	</dict>
+	<key>C3</key>
+	<dict>
+		<key>name</key>
+		<string>Chile0056</string>
+		<key>currency</key>
+		<string>CLP</string>
+		<key>currencySymbol</key>
+		<string>$</string>
+	</dict>
+	<key>M1</key>
+	<dict>
+		<key>name</key>
+		<string>Mexico0056</string>
+		<key>currency</key>
+		<string>MXN</string>
+		<key>currencySymbol</key>
+		<string>$</string>
+	</dict>
+	<key>P1</key>
+	<dict>
+		<key>name</key>
+		<string>Peru0056</string>
+		<key>currency</key>
+		<string>PEN</string>
+		<key>currencySymbol</key>
+		<string>S/.</string>
+	</dict>
+	<key>LL</key>
+	<dict>
+		<key>name</key>
+		<string>Latin America and the Caribbean</string>
+		<key>currency</key>
+		<string>USD</string>
+		<key>currencySymbol</key>
+		<string>$</string>
+	</dict>
+
 </dict>
 </plist>
