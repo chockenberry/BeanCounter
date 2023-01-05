@@ -9,6 +9,8 @@
 	<integer>0</integer>
 	<key>chartShowTotal</key>
 	<true/>
+	<key>chartOnlyLatest</key>
+	<false/>
 	<key>chartCategory</key>
 	<integer>0</integer>
 	

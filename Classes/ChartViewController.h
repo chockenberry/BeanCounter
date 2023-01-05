@@ -37,10 +37,10 @@
 @property (nonatomic, readonly) Region *regionChoice;
 
 // utility (for subclasses)
-- (NSDate *)earliestDateForChartPeriod:(NSUInteger)chartPeriod;
+- (NSDate *)earliestDateForChartPeriod:(NSUInteger)chartPeriod onlyLatest:(BOOL)onlyLatest;
 - (NSDate *)latestDateForChartPeriod:(NSUInteger)chartPeriod;
 - (NSCalendarUnit)calendarUnitForChartPeriod:(NSUInteger)chartPeriod;
-- (NSUInteger)intervalCountForChartPeriod:(NSUInteger)chartPeriod;
+- (NSUInteger)intervalCountForChartPeriod:(NSUInteger)chartPeriod onlyLatest:(BOOL)onlyLatest;
 - (CPTScatterPlot *)plotWithIdentifier:(NSString *)identifier usingTitle:(NSString *)title andColor:(NSColor *)color;
 
 // overrides

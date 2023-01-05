@@ -221,7 +221,7 @@
 
 #pragma mark - Utility
 
-- (NSDate *)earliestDateForChartPeriod:(NSUInteger)chartPeriod
+- (NSDate *)earliestDateForChartPeriod:(NSUInteger)chartPeriod onlyLatest:(BOOL)onlyLatest
 {
 	NSDate *result = nil;
 
@@ -237,7 +237,12 @@
 		}
 	}
 #else
-	result = [Sale fastMinimumDateInManagedObjectContext:self.managedObjectContext];
+	if (onlyLatest) {
+		result = [NSDate dateWithTimeIntervalSinceNow:-(4.0 * 365.0 * 24.0 * 60.0 * 60.0)];
+	}
+	else {
+		result = [Sale fastMinimumDateInManagedObjectContext:self.managedObjectContext];
+	}
 #endif
 	
 	// move the date to the beginning of the year
@@ -295,12 +300,12 @@
 	return result;
 }
 
-- (NSUInteger)intervalCountForChartPeriod:(NSUInteger)chartPeriod
+- (NSUInteger)intervalCountForChartPeriod:(NSUInteger)chartPeriod onlyLatest:(BOOL)onlyLatest
 {
 	NSUInteger result = 0;
 	
 	NSCalendarUnit calendarUnit = [self calendarUnitForChartPeriod:chartPeriod];
-	NSDate *earliestDate = [self earliestDateForChartPeriod:chartPeriod];
+	NSDate *earliestDate = [self earliestDateForChartPeriod:chartPeriod onlyLatest:onlyLatest];
 	NSDate *latestDate = [self latestDateForChartPeriod:chartPeriod];
 	if (earliestDate && latestDate) {
 		NSDateComponents *components = [[NSCalendar currentCalendar] components:calendarUnit fromDate:earliestDate toDate:latestDate options:0];
@@ -384,6 +389,7 @@
 	
 	NSUInteger chartPeriod = [self.settings integerForKey:@"chartPeriod"];
 	BOOL chartShowTotal = [self.settings boolForKey:@"chartShowTotal"];
+	BOOL chartOnlyLatest = [self.settings boolForKey:@"chartOnlyLatest"];
 	NSUInteger chartCategory = [self.settings integerForKey:@"chartCategory"];
 	
 	NSString *chartCategoryFilter = nil;
@@ -407,8 +413,8 @@
 	
 	Region *region = [self regionChoice];
 	
-	NSDate *earliestDate = [self earliestDateForChartPeriod:chartPeriod];
-	NSUInteger intervalCount = [self intervalCountForChartPeriod:chartPeriod];
+	NSDate *earliestDate = [self earliestDateForChartPeriod:chartPeriod onlyLatest:chartOnlyLatest];
+	NSUInteger intervalCount = [self intervalCountForChartPeriod:chartPeriod onlyLatest:chartOnlyLatest];
 	
 	NSUInteger plotCount = 0;
 	
@@ -888,8 +894,9 @@
 -(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot
 {
 	NSUInteger chartPeriod = [self.settings integerForKey:@"chartPeriod"];
-	
-	NSUInteger intervalCount = [self intervalCountForChartPeriod:chartPeriod];
+	BOOL chartOnlyLatest = [self.settings boolForKey:@"chartOnlyLatest"];
+
+	NSUInteger intervalCount = [self intervalCountForChartPeriod:chartPeriod onlyLatest:chartOnlyLatest];
 	
 	return intervalCount;
 }
