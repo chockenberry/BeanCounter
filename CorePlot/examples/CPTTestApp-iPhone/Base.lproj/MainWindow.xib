@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIApplication">
+            <connections>
+                <outlet property="delegate" destination="3" id="99"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <customObject id="3" customClass="iPhoneAppDelegate" customModule="CPTTestApp_iPhone" customModuleProvider="target">
+            <connections>
+                <outlet property="tabBarController" destination="106" id="127"/>
+                <outlet property="window" destination="2" id="128"/>
+            </connections>
+        </customObject>
+        <window opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" visibleAtLaunch="YES" resizesToFullScreen="NO" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <point key="canvasLocation" x="-639" y="508"/>
+        </window>
+        <tabBarController id="106">
+            <extendedEdge key="edgesForExtendedLayout"/>
+            <tabBar key="tabBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="107">
+                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            </tabBar>
+            <viewControllers>
+                <viewController title="Scatter Plot" nibName="ScatterPlot" id="108" customClass="ScatterPlotController" customModule="CPTTestApp_iPhone" customModuleProvider="target">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Scatter Plot" image="16-line-chart.png" id="111"/>
+                </viewController>
+                <viewController nibName="BarChart" id="109" customClass="BarChartController" customModule="CPTTestApp_iPhone" customModuleProvider="target">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Bar Chart" image="17-bar-chart.png" id="110"/>
+                </viewController>
+                <viewController title="Pie Chart" nibName="PieChart" id="125" customClass="PieChartController" customModule="CPTTestApp_iPhone" customModuleProvider="target">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Pie Chart" image="62-contrast.png" id="126"/>
+                    <toolbarItems/>
+                </viewController>
+            </viewControllers>
+            <point key="canvasLocation" x="132" y="508"/>
+        </tabBarController>
+    </objects>
+    <resources>
+        <image name="16-line-chart.png" width="30" height="24"/>
+        <image name="17-bar-chart.png" width="29" height="24"/>
+        <image name="62-contrast.png" width="20" height="20"/>
+    </resources>
+</document>

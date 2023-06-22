@@ -8,7 +8,7 @@
 
 #import "ProductEarningsChartViewController.h"
 
-#import "CPTCalendarFormatter.h"
+//#import "CPTCalendarFormatter.h"
 
 #import "Product.h"
 #import "InternationalInfo.h"
@@ -165,8 +165,8 @@
 			// adjust plot space
 			CPTXYPlotSpace *plotSpace = [[[CPTXYPlotSpace alloc] init] autorelease];
 			{
-				plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(-0.5) length:CPTDecimalFromInteger(intervalCount)];
-				plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromInteger(0) length:[_chartMaximumCache decimalValue]];
+				plotSpace.xRange = [CPTPlotRange plotRangeWithLocationDecimal:CPTDecimalFromFloat(-0.5) lengthDecimal:CPTDecimalFromInteger(intervalCount)];
+				plotSpace.yRange = [CPTPlotRange plotRangeWithLocationDecimal:CPTDecimalFromInteger(0) lengthDecimal:[_chartMaximumCache decimalValue]];
 				[graph addPlotSpace:plotSpace];
 			}
 			

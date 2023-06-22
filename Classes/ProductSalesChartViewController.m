@@ -9,7 +9,7 @@
 #import "ProductSalesChartViewController.h"
 
 #import "Product.h"
-#import "CPTCalendarFormatter.h"
+//#import "CPTCalendarFormatter.h"
 #import "NSMutableDictionary+Settings.h"
 
 #import "DebugLog.h"

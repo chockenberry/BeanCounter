@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:CorePlotGallery"
+      name = "Plot Gallery">
+      <FileRef
+         location = "group:Plot_Gallery.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Mac Apps">
+      <FileRef
+         location = "group:CPTTestApp/CPTTestApp.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:DatePlot/DatePlot.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:DropPlot/DropPlot.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:MinorTickLabels/minorTickFormatter.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:RangePlot/RangePlot.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "iOS Apps">
+      <FileRef
+         location = "group:CPTTestApp-iPad/CPTTestApp-iPad.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:CPTTestApp-iPhone/CPTTestApp-iPhone.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:../QCPlugin"
+      name = "Quartz Composer">
+      <FileRef
+         location = "group:CorePlotQCPlugin.xcodeproj">
+      </FileRef>
+   </Group>
+</Workspace>

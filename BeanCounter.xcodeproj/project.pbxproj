@@ -11,8 +11,8 @@
 		440DC49E15000D4100246B63 /* ProductSalesReportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 440DC49D15000D4100246B63 /* ProductSalesReportOperation.m */; };
 		440DC4A115000DED00246B63 /* RegionSalesReportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 440DC4A015000DED00246B63 /* RegionSalesReportOperation.m */; };
 		440DC4AF1501475700246B63 /* ProductSalesChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440DC4AE1501475700246B63 /* ProductSalesChartViewController.m */; };
-		440DC4B215016CF200246B63 /* CPTCalendarFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 440DC4B115016CF100246B63 /* CPTCalendarFormatter.m */; };
 		440DC4E01506C82E00246B63 /* ProductSalesChartOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 440DC4DE150536C200246B63 /* ProductSalesChartOperation.m */; };
+		4419B4412A44DAFA0018CC1D /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C6CB7C2A44DA7A001AED2E /* CorePlot.framework */; };
 		4421C287147EF58000F66CFD /* AccountDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4421C285147EF58000F66CFD /* AccountDocument.xib */; };
 		4421C28B1481B1E900F66CFD /* SourceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4421C2891481B1E900F66CFD /* SourceListViewController.m */; };
 		4421C28C1481B1E900F66CFD /* SourceListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4421C28A1481B1E900F66CFD /* SourceListView.xib */; };
@@ -38,6 +38,7 @@
 		4473FC5F14B18BF700795B1E /* EditGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4473FC5D14B18BF700795B1E /* EditGroupsViewController.m */; };
 		4473FC6314B18CFD00795B1E /* EditPartnersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4473FC6014B18CFC00795B1E /* EditPartnersView.xib */; };
 		4473FC6414B18CFD00795B1E /* EditPartnersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4473FC6214B18CFC00795B1E /* EditPartnersViewController.m */; };
+		447413052A44D50600698EAD /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 447413042A44D50600698EAD /* libicucore.tbd */; };
 		44742D5E15178AF300B8621B /* Split.m in Sources */ = {isa = PBXBuildFile; fileRef = 44742D5D15178AF300B8621B /* Split.m */; };
 		44742D7F1517C98600B8621B /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 44742D7E1517C98600B8621B /* NSString+UUID.m */; };
 		44742D821517E02D00B8621B /* SplitCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 44742D811517E02B00B8621B /* SplitCollectionViewItem.m */; };
@@ -59,15 +60,11 @@
 		4485DF7414FC2DB7000C21D6 /* DepositParserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4485DF6A14FC2D21000C21D6 /* DepositParserOperation.m */; };
 		44873463152CE11F00578E2B /* AccountDocument2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44270EC1152BB9B0003E6324 /* AccountDocument2.xcdatamodeld */; };
 		448734F315325DF500578E2B /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 448734F215325DF500578E2B /* dsa_pub.pem */; };
-		448734F515325E8600578E2B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448734F415325E8600578E2B /* Sparkle.framework */; };
 		448734FD1532610100578E2B /* PurchaseWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 448734FC1532610100578E2B /* PurchaseWindowController.m */; };
 		448735001532628C00578E2B /* PurchaseWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 448734FE1532628C00578E2B /* PurchaseWindow.xib */; };
 		44873503153262F100578E2B /* RegistrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 44873502153262F100578E2B /* RegistrationManager.m */; };
-		44873505153265CB00578E2B /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 448734F415325E8600578E2B /* Sparkle.framework */; };
 		4492218D12F62D4C00C0AC68 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4492218C12F62D4C00C0AC68 /* ChartViewController.m */; };
 		4492219012F62D9B00C0AC68 /* ChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4492218E12F62D9B00C0AC68 /* ChartView.xib */; };
-		4492222712F6320900C0AC68 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4492222612F6320900C0AC68 /* CorePlot.framework */; };
-		449222DB12F641F300C0AC68 /* CorePlot.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4492222612F6320900C0AC68 /* CorePlot.framework */; };
 		44ACD7CB12E38F12009F385F /* ReportParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ACD7CA12E38F12009F385F /* ReportParser.m */; };
 		44ACD82A12E39D64009F385F /* ReportData.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ACD82912E39D64009F385F /* ReportData.m */; };
 		44ACDD7E12E91979009F385F /* ReportParserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ACDD7D12E91979009F385F /* ReportParserOperation.m */; };
@@ -80,6 +77,7 @@
 		44ACE02D12EB9076009F385F /* Earning.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ACE02612EB9076009F385F /* Earning.m */; };
 		44ACE02E12EB9076009F385F /* Region.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ACE02812EB9076009F385F /* Region.m */; };
 		44ACE11A12ECC9C1009F385F /* ReportImporterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ACE11912ECC9C1009F385F /* ReportImporterOperation.m */; };
+		44C6CB8D2A44DACE001AED2E /* CorePlot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44C6CB7C2A44DA7A001AED2E /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		44CBA50014FEA31D00D45D68 /* ProductEarningsReportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CBA4FF14FEA31D00D45D68 /* ProductEarningsReportOperation.m */; };
 		44CC579F14B138AA00440E5E /* ImportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CC579E14B138AA00440E5E /* ImportViewController.m */; };
 		44CC57A114B138B600440E5E /* ImportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CC57A014B138B600440E5E /* ImportView.xib */; };
@@ -104,7 +102,6 @@
 		44E9604C147B3BDE001626C4 /* NSArray_DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E96049147B3BDE001626C4 /* NSArray_DeepMutableCopy.m */; };
 		44E9604D147B3BDE001626C4 /* NSDictionary_DeepMutableCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9604B147B3BDE001626C4 /* NSDictionary_DeepMutableCopy.m */; };
 		44E9605B147B408F001626C4 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E9605A147B408F001626C4 /* RegexKitLite.m */; };
-		44E96060147B4108001626C4 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44E9605F147B4108001626C4 /* libicucore.dylib */; };
 		44E96063147B4175001626C4 /* ICUTemplateMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E96062147B4175001626C4 /* ICUTemplateMatcher.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		775DFF38067A968500C5B868 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
@@ -113,17 +110,82 @@
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		44C6CB7B2A44DA7A001AED2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = "CorePlot Mac";
+		};
+		44C6CB7D2A44DA7A001AED2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0730F600109492D800E95162;
+			remoteInfo = "UnitTests Mac";
+		};
+		44C6CB7F2A44DA7A001AED2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09781A46185200D45436;
+			remoteInfo = "CorePlot iOS";
+		};
+		44C6CB812A44DA7A001AED2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09821A46185300D45436;
+			remoteInfo = "UnitTests iOS";
+		};
+		44C6CB832A44DA7A001AED2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09BA1A4619A900D45436;
+			remoteInfo = "CorePlot-CocoaTouch";
+		};
+		44C6CB852A44DA7A001AED2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09C41A4619A900D45436;
+			remoteInfo = "CorePlot-CocoaTouchTests";
+		};
+		44C6CB872A44DA7A001AED2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C37EA6921BC83F2A0091C8F7;
+			remoteInfo = "CorePlot tvOS";
+		};
+		44C6CB892A44DA7A001AED2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C37EA6B71BC83F2D0091C8F7;
+			remoteInfo = "UnitTests tvOS";
+		};
+		44C6CB8B2A44DAAC001AED2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = "CorePlot Mac";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		449222DA12F641DC00C0AC68 /* Copy Frameworks */ = {
+		447412FC2A44CEFF00698EAD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				449222DB12F641F300C0AC68 /* CorePlot.framework in Copy Frameworks */,
-				44873505153265CB00578E2B /* Sparkle.framework in Copy Frameworks */,
+				44C6CB8D2A44DACE001AED2E /* CorePlot.framework in Embed Frameworks */,
 			);
-			name = "Copy Frameworks";
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -196,6 +258,7 @@
 		4473FC6014B18CFC00795B1E /* EditPartnersView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditPartnersView.xib; path = Classes/EditPartnersView.xib; sourceTree = "<group>"; };
 		4473FC6114B18CFC00795B1E /* EditPartnersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditPartnersViewController.h; path = Classes/EditPartnersViewController.h; sourceTree = "<group>"; };
 		4473FC6214B18CFC00795B1E /* EditPartnersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditPartnersViewController.m; path = Classes/EditPartnersViewController.m; sourceTree = "<group>"; };
+		447413042A44D50600698EAD /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		44742D5C15178AF300B8621B /* Split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Split.h; path = Classes/Split.h; sourceTree = "<group>"; };
 		44742D5D15178AF300B8621B /* Split.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Split.m; path = Classes/Split.m; sourceTree = "<group>"; };
 		44742D7D1517C98600B8621B /* NSString+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+UUID.h"; path = "Classes/NSString+UUID.h"; sourceTree = "<group>"; };
@@ -231,7 +294,6 @@
 		448734ED15325BDD00578E2B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		448734EE15325BDD00578E2B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		448734F215325DF500578E2B /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dsa_pub.pem; path = Resources/dsa_pub.pem; sourceTree = "<group>"; };
-		448734F415325E8600578E2B /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "Classes/Sparkle 1.5b6/Sparkle.framework"; sourceTree = "<group>"; };
 		448734FB1532610100578E2B /* PurchaseWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PurchaseWindowController.h; path = Classes/PurchaseWindowController.h; sourceTree = "<group>"; };
 		448734FC1532610100578E2B /* PurchaseWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PurchaseWindowController.m; path = Classes/PurchaseWindowController.m; sourceTree = "<group>"; };
 		448734FF1532628C00578E2B /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/PurchaseWindow.xib; sourceTree = "<group>"; };
@@ -240,7 +302,6 @@
 		4492218B12F62D4C00C0AC68 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartViewController.h; path = Classes/ChartViewController.h; sourceTree = "<group>"; };
 		4492218C12F62D4C00C0AC68 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChartViewController.m; path = Classes/ChartViewController.m; sourceTree = "<group>"; };
 		4492218F12F62D9B00C0AC68 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/ChartView.xib; sourceTree = "<group>"; };
-		4492222612F6320900C0AC68 /* CorePlot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CorePlot.framework; path = Frameworks/CorePlot.framework; sourceTree = "<group>"; };
 		44ACD7C912E38F12009F385F /* ReportParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReportParser.h; path = Classes/ReportParser.h; sourceTree = "<group>"; };
 		44ACD7CA12E38F12009F385F /* ReportParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReportParser.m; path = Classes/ReportParser.m; sourceTree = "<group>"; };
 		44ACD7D712E39436009F385F /* DebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLog.h; path = Classes/DebugLog.h; sourceTree = "<group>"; };
@@ -266,6 +327,7 @@
 		44ACE02812EB9076009F385F /* Region.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Region.m; path = Classes/Region.m; sourceTree = "<group>"; };
 		44ACE11812ECC9C1009F385F /* ReportImporterOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReportImporterOperation.h; path = Classes/ReportImporterOperation.h; sourceTree = "<group>"; };
 		44ACE11912ECC9C1009F385F /* ReportImporterOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReportImporterOperation.m; path = Classes/ReportImporterOperation.m; sourceTree = "<group>"; };
+		44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CorePlot.xcodeproj; path = CorePlot/framework/CorePlot.xcodeproj; sourceTree = "<group>"; };
 		44CBA4FE14FEA31D00D45D68 /* ProductEarningsReportOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductEarningsReportOperation.h; path = Classes/ProductEarningsReportOperation.h; sourceTree = "<group>"; };
 		44CBA4FF14FEA31D00D45D68 /* ProductEarningsReportOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductEarningsReportOperation.m; path = Classes/ProductEarningsReportOperation.m; sourceTree = "<group>"; };
 		44CBA50E150D5F8100D45D68 /* PlotInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlotInformation.h; path = Classes/PlotInformation.h; sourceTree = "<group>"; };
@@ -313,7 +375,6 @@
 		44E9604E147B3BF2001626C4 /* DeepMutableCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeepMutableCopy.h; path = Classes/DeepMutableCopy.h; sourceTree = "<group>"; };
 		44E96059147B408F001626C4 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		44E9605A147B408F001626C4 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
-		44E9605F147B4108001626C4 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		44E96061147B4174001626C4 /* ICUTemplateMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ICUTemplateMatcher.h; path = Classes/MGTemplateEngine/ICUTemplateMatcher.h; sourceTree = "<group>"; };
 		44E96062147B4175001626C4 /* ICUTemplateMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ICUTemplateMatcher.m; path = Classes/MGTemplateEngine/ICUTemplateMatcher.m; sourceTree = "<group>"; };
 		7788DA0506752A1600599AAD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -326,11 +387,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E96060147B4108001626C4 /* libicucore.dylib in Frameworks */,
+				4419B4412A44DAFA0018CC1D /* CorePlot.framework in Frameworks */,
 				775DFF38067A968500C5B868 /* Cocoa.framework in Frameworks */,
-				4492222712F6320900C0AC68 /* CorePlot.framework in Frameworks */,
 				44285A9812F9FF13001E020A /* WebKit.framework in Frameworks */,
-				448734F515325E8600578E2B /* Sparkle.framework in Frameworks */,
+				447413052A44D50600698EAD /* libicucore.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,15 +408,13 @@
 		1058C7A8FEA54F5311CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				447413042A44D50600698EAD /* libicucore.tbd */,
 				2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */,
 				7788DA0506752A1600599AAD /* CoreData.framework */,
 				2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */,
 				44285A9712F9FF13001E020A /* WebKit.framework */,
-				4492222612F6320900C0AC68 /* CorePlot.framework */,
-				44E9605F147B4108001626C4 /* libicucore.dylib */,
 				448734ED15325BDD00578E2B /* IOKit.framework */,
 				448734EE15325BDD00578E2B /* Security.framework */,
-				448734F415325E8600578E2B /* Sparkle.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -372,6 +430,7 @@
 		2A37F4AAFDCFA73011CA2CEA /* BeanCounter */ = {
 			isa = PBXGroup;
 			children = (
+				44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */,
 				4458880915279C3A00DC393C /* BeanCounter.entitlements */,
 				E1B74B1A0667B4A90069E3BA /* Models */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
@@ -757,6 +816,21 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
+		44C6CB6C2A44DA7A001AED2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44C6CB7C2A44DA7A001AED2E /* CorePlot.framework */,
+				44C6CB7E2A44DA7A001AED2E /* UnitTests.xctest */,
+				44C6CB802A44DA7A001AED2E /* CorePlot.framework */,
+				44C6CB822A44DA7A001AED2E /* UnitTests iOS.xctest */,
+				44C6CB842A44DA7A001AED2E /* libCorePlot-CocoaTouch.a */,
+				44C6CB862A44DA7A001AED2E /* CorePlot-CocoaTouchTests.xctest */,
+				44C6CB882A44DA7A001AED2E /* CorePlot.framework */,
+				44C6CB8A2A44DA7A001AED2E /* UnitTests tvOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		44CBA4FD14FEA2CA00D45D68 /* Display Reports */ = {
 			isa = PBXGroup;
 			children = (
@@ -838,13 +912,14 @@
 			buildConfigurationList = 26FC0AA50875C8B900E6366F /* Build configuration list for PBXNativeTarget "BeanCounter" */;
 			buildPhases = (
 				8D15AC2B0486D014006FF6A4 /* Resources */,
-				449222DA12F641DC00C0AC68 /* Copy Frameworks */,
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
+				447412FC2A44CEFF00698EAD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				44C6CB8C2A44DAAC001AED2E /* PBXTargetDependency */,
 			);
 			name = BeanCounter;
 			productInstallPath = "$(HOME)/Applications";
@@ -859,6 +934,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					8D15AC270486D014006FF6A4 = {
+						DevelopmentTeam = RYQWBTQRPT;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 26FC0AA90875C8B900E6366F /* Build configuration list for PBXProject "BeanCounter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -872,12 +953,77 @@
 			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* BeanCounter */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 44C6CB6C2A44DA7A001AED2E /* Products */;
+					ProjectRef = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D15AC270486D014006FF6A4 /* BeanCounter */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		44C6CB7C2A44DA7A001AED2E /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = 44C6CB7B2A44DA7A001AED2E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44C6CB7E2A44DA7A001AED2E /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = 44C6CB7D2A44DA7A001AED2E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44C6CB802A44DA7A001AED2E /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = 44C6CB7F2A44DA7A001AED2E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44C6CB822A44DA7A001AED2E /* UnitTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UnitTests iOS.xctest";
+			remoteRef = 44C6CB812A44DA7A001AED2E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44C6CB842A44DA7A001AED2E /* libCorePlot-CocoaTouch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCorePlot-CocoaTouch.a";
+			remoteRef = 44C6CB832A44DA7A001AED2E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44C6CB862A44DA7A001AED2E /* CorePlot-CocoaTouchTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CorePlot-CocoaTouchTests.xctest";
+			remoteRef = 44C6CB852A44DA7A001AED2E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44C6CB882A44DA7A001AED2E /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = 44C6CB872A44DA7A001AED2E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		44C6CB8A2A44DA7A001AED2E /* UnitTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UnitTests tvOS.xctest";
+			remoteRef = 44C6CB892A44DA7A001AED2E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D15AC2B0486D014006FF6A4 /* Resources */ = {
@@ -970,7 +1116,6 @@
 				440DC49E15000D4100246B63 /* ProductSalesReportOperation.m in Sources */,
 				440DC4A115000DED00246B63 /* RegionSalesReportOperation.m in Sources */,
 				440DC4AF1501475700246B63 /* ProductSalesChartViewController.m in Sources */,
-				440DC4B215016CF200246B63 /* CPTCalendarFormatter.m in Sources */,
 				440DC4E01506C82E00246B63 /* ProductSalesChartOperation.m in Sources */,
 				44D48183150FD61F00E667B4 /* GraphHostingView.m in Sources */,
 				44742D5E15178AF300B8621B /* Split.m in Sources */,
@@ -995,6 +1140,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44C6CB8C2A44DAAC001AED2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CorePlot Mac";
+			targetProxy = 44C6CB8B2A44DAAC001AED2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
@@ -1075,15 +1228,14 @@
 		26FC0AA60875C8B900E6366F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_ENTITLEMENTS = BeanCounter.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks\"",
-					"\"$(SRCROOT)/Classes/Sparkle 1.5b6\"",
-				);
+				DEVELOPMENT_TEAM = RYQWBTQRPT;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
@@ -1092,9 +1244,11 @@
 				GCC_PREFIX_HEADER = BeanCounter_Prefix.pch;
 				INFOPLIST_FILE = "BeanCounter-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iconfactory.BeanCounter;
 				PRODUCT_NAME = BeanCounter;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1102,24 +1256,25 @@
 		26FC0AA70875C8B900E6366F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_ENTITLEMENTS = BeanCounter.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Frameworks\"",
-					"\"$(SRCROOT)/Classes/Sparkle 1.5b6\"",
-				);
+				DEVELOPMENT_TEAM = RYQWBTQRPT;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BeanCounter_Prefix.pch;
 				INFOPLIST_FILE = "BeanCounter-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iconfactory.BeanCounter;
 				PRODUCT_NAME = BeanCounter;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1133,9 +1288,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
 				INFOPLIST_PREPROCESS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "-DDEBUG";
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DMAC_APP_STORE",
+				);
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -1149,7 +1307,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-C";
 				INFOPLIST_PREPROCESS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				OTHER_CFLAGS = "-DMAC_APP_STORE";
 				SDKROOT = macosx;
 			};
 			name = Release;

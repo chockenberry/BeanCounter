@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		BC8166CE1100DD00006D898E /* 16-line-chart.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8166CC1100DD00006D898E /* 16-line-chart.png */; };
+		BC8166CF1100DD00006D898E /* 17-bar-chart.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8166CD1100DD00006D898E /* 17-bar-chart.png */; };
+		BC8166D21100DD6F006D898E /* 62-contrast.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8166D11100DD6F006D898E /* 62-contrast.png */; };
+		BC9B81DA0FB893F70035D8DA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B81D90FB893F70035D8DA /* QuartzCore.framework */; };
+		C359603719CE34FC005CDFB9 /* BarChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C359603319CE34FB005CDFB9 /* BarChartController.swift */; };
+		C359603819CE34FC005CDFB9 /* iPhoneAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C359603419CE34FB005CDFB9 /* iPhoneAppDelegate.swift */; };
+		C359603919CE34FC005CDFB9 /* PieChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C359603519CE34FB005CDFB9 /* PieChartController.swift */; };
+		C359603A19CE34FC005CDFB9 /* ScatterPlotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C359603619CE34FB005CDFB9 /* ScatterPlotController.swift */; };
+		C3B9F9D417503CDD001CCC50 /* BlueTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = C3B9F9D317503CDD001CCC50 /* BlueTexture.png */; };
+		C3D0A20C20E019EB00BA2921 /* PieChart.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A20E20E019EB00BA2921 /* PieChart.xib */; };
+		C3D0A21C20E019F000BA2921 /* BarChart.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A21E20E019F000BA2921 /* BarChart.xib */; };
+		C3D0A21F20E019F300BA2921 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A22120E019F300BA2921 /* MainWindow.xib */; };
+		C3D0A22220E019F800BA2921 /* ScatterPlot.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A22420E019F800BA2921 /* ScatterPlot.xib */; };
+		C3D0A22520E019FF00BA2921 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0A22720E019FF00BA2921 /* Launch Screen.xib */; };
+		C3D3936419FD671100148319 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3D3936319FD671100148319 /* Images.xcassets */; };
+		C3D414C61A7D847C00B6F5D6 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D414C31A7D846500B6F5D6 /* libCorePlot-CocoaTouch.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C31D01F11D10F506008C1EF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D414AE1A7D846500B6F5D6 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C37EA6921BC83F2A0091C8F7;
+			remoteInfo = "CorePlot tvOS";
+		};
+		C31D01F31D10F506008C1EF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D414AE1A7D846500B6F5D6 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C37EA6B71BC83F2D0091C8F7;
+			remoteInfo = "UnitTests tvOS";
+		};
+		C3D414BA1A7D846500B6F5D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D414AE1A7D846500B6F5D6 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = CorePlot;
+		};
+		C3D414BC1A7D846500B6F5D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D414AE1A7D846500B6F5D6 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0730F600109492D800E95162;
+			remoteInfo = UnitTests;
+		};
+		C3D414BE1A7D846500B6F5D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D414AE1A7D846500B6F5D6 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09781A46185200D45436;
+			remoteInfo = CorePlot_iOS;
+		};
+		C3D414C01A7D846500B6F5D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D414AE1A7D846500B6F5D6 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09821A46185300D45436;
+			remoteInfo = CorePlot_iOSTests;
+		};
+		C3D414C21A7D846500B6F5D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D414AE1A7D846500B6F5D6 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09BA1A4619A900D45436;
+			remoteInfo = "CorePlot-CocoaTouch";
+		};
+		C3D414C41A7D846500B6F5D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3D414AE1A7D846500B6F5D6 /* CorePlot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38A09C41A4619A900D45436;
+			remoteInfo = "CorePlot-CocoaTouchTests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* CPTTestApp-iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CPTTestApp-iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BC8166CC1100DD00006D898E /* 16-line-chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "16-line-chart.png"; path = "GlyphishIcons/16-line-chart.png"; sourceTree = "<group>"; };
+		BC8166CD1100DD00006D898E /* 17-bar-chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "17-bar-chart.png"; path = "GlyphishIcons/17-bar-chart.png"; sourceTree = "<group>"; };
+		BC8166D11100DD6F006D898E /* 62-contrast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "62-contrast.png"; path = "GlyphishIcons/62-contrast.png"; sourceTree = "<group>"; };
+		BC9B81D90FB893F70035D8DA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C359603319CE34FB005CDFB9 /* BarChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartController.swift; sourceTree = "<group>"; };
+		C359603419CE34FB005CDFB9 /* iPhoneAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iPhoneAppDelegate.swift; sourceTree = "<group>"; };
+		C359603519CE34FB005CDFB9 /* PieChartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartController.swift; sourceTree = "<group>"; };
+		C359603619CE34FB005CDFB9 /* ScatterPlotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterPlotController.swift; sourceTree = "<group>"; };
+		C359603B19CE352A005CDFB9 /* CPTTestApp-iPhone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "CPTTestApp-iPhone-Bridging-Header.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		C37A40F020E0322D00C4FF48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		C3B9F9D317503CDD001CCC50 /* BlueTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueTexture.png; sourceTree = "<group>"; };
+		C3C3CBDE19EA125D00A0296A /* CorePlotWarnings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = CorePlotWarnings.xcconfig; path = ../../framework/xcconfig/CorePlotWarnings.xcconfig; sourceTree = "<group>"; };
+		C3CD283D17DE9C95008EED1E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		C3D0A22820E01A0600BA2921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PieChart.xib; sourceTree = "<group>"; };
+		C3D0A22920E01A0600BA2921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BarChart.xib; sourceTree = "<group>"; };
+		C3D0A22A20E01A0600BA2921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		C3D0A22B20E01A0600BA2921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ScatterPlot.xib; sourceTree = "<group>"; };
+		C3D0A22C20E01A0600BA2921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "Base.lproj/Launch Screen.xib"; sourceTree = "<group>"; };
+		C3D3936319FD671100148319 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "CPTTestApp-iPhone/Images.xcassets"; sourceTree = "<group>"; };
+		C3D414AE1A7D846500B6F5D6 /* CorePlot.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CorePlot.xcodeproj; path = ../../framework/CorePlot.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
+				BC9B81DA0FB893F70035D8DA /* QuartzCore.framework in Frameworks */,
+				C3D414C61A7D847C00B6F5D6 /* libCorePlot-CocoaTouch.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C359603419CE34FB005CDFB9 /* iPhoneAppDelegate.swift */,
+				C359603319CE34FB005CDFB9 /* BarChartController.swift */,
+				C359603519CE34FB005CDFB9 /* PieChartController.swift */,
+				C359603619CE34FB005CDFB9 /* ScatterPlotController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* CPTTestApp-iPhone.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CPTTestApp-iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				C3D414AE1A7D846500B6F5D6 /* CorePlot.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			indentWidth = 4;
+			name = "CPTTestApp-iPhone";
+			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 0;
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C359603B19CE352A005CDFB9 /* CPTTestApp-iPhone-Bridging-Header.h */,
+				C3C3CBDE19EA125D00A0296A /* CorePlotWarnings.xcconfig */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3D3936319FD671100148319 /* Images.xcassets */,
+				BC8166D11100DD6F006D898E /* 62-contrast.png */,
+				BC8166CC1100DD00006D898E /* 16-line-chart.png */,
+				BC8166CD1100DD00006D898E /* 17-bar-chart.png */,
+				C3B9F9D317503CDD001CCC50 /* BlueTexture.png */,
+				C3D0A22720E019FF00BA2921 /* Launch Screen.xib */,
+				C3D0A22120E019F300BA2921 /* MainWindow.xib */,
+				C3D0A22420E019F800BA2921 /* ScatterPlot.xib */,
+				C3D0A21E20E019F000BA2921 /* BarChart.xib */,
+				C3D0A20E20E019EB00BA2921 /* PieChart.xib */,
+				C37A40F120E0322D00C4FF48 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC9B81D90FB893F70035D8DA /* QuartzCore.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765070DF74369002DB57D /* CoreGraphics.framework */,
+				C3CD283D17DE9C95008EED1E /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3D414AF1A7D846500B6F5D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3D414BB1A7D846500B6F5D6 /* CorePlot.framework */,
+				C3D414BD1A7D846500B6F5D6 /* UnitTests.xctest */,
+				C3D414BF1A7D846500B6F5D6 /* CorePlot.framework */,
+				C3D414C11A7D846500B6F5D6 /* UnitTests iOS.xctest */,
+				C3D414C31A7D846500B6F5D6 /* libCorePlot-CocoaTouch.a */,
+				C3D414C51A7D846500B6F5D6 /* CorePlot-CocoaTouchTests.xctest */,
+				C31D01F21D10F506008C1EF2 /* CorePlot.framework */,
+				C31D01F41D10F506008C1EF2 /* UnitTests tvOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* CPTTestApp-iPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CPTTestApp-iPhone" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CPTTestApp-iPhone";
+			productName = "CPTTestApp-iPhone";
+			productReference = 1D6058910D05DD3D006BFB54 /* CPTTestApp-iPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 28ZA45DE7D;
+						LastSwiftMigration = 1020;
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CPTTestApp-iPhone" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				Base,
+				fr,
+				de,
+				ja,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CPTTestApp-iPhone */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C3D414AF1A7D846500B6F5D6 /* Products */;
+					ProjectRef = C3D414AE1A7D846500B6F5D6 /* CorePlot.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* CPTTestApp-iPhone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C31D01F21D10F506008C1EF2 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = C31D01F11D10F506008C1EF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C31D01F41D10F506008C1EF2 /* UnitTests tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UnitTests tvOS.xctest";
+			remoteRef = C31D01F31D10F506008C1EF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3D414BB1A7D846500B6F5D6 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = C3D414BA1A7D846500B6F5D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3D414BD1A7D846500B6F5D6 /* UnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.xctest;
+			remoteRef = C3D414BC1A7D846500B6F5D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3D414BF1A7D846500B6F5D6 /* CorePlot.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CorePlot.framework;
+			remoteRef = C3D414BE1A7D846500B6F5D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3D414C11A7D846500B6F5D6 /* UnitTests iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "UnitTests iOS.xctest";
+			remoteRef = C3D414C01A7D846500B6F5D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3D414C31A7D846500B6F5D6 /* libCorePlot-CocoaTouch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libCorePlot-CocoaTouch.a";
+			remoteRef = C3D414C21A7D846500B6F5D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3D414C51A7D846500B6F5D6 /* CorePlot-CocoaTouchTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CorePlot-CocoaTouchTests.xctest";
+			remoteRef = C3D414C41A7D846500B6F5D6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D0A21F20E019F300BA2921 /* MainWindow.xib in Resources */,
+				C3D0A21C20E019F000BA2921 /* BarChart.xib in Resources */,
+				C3D0A22220E019F800BA2921 /* ScatterPlot.xib in Resources */,
+				C3D3936419FD671100148319 /* Images.xcassets in Resources */,
+				C3D0A20C20E019EB00BA2921 /* PieChart.xib in Resources */,
+				C3D0A22520E019FF00BA2921 /* Launch Screen.xib in Resources */,
+				BC8166CE1100DD00006D898E /* 16-line-chart.png in Resources */,
+				BC8166CF1100DD00006D898E /* 17-bar-chart.png in Resources */,
+				BC8166D21100DD6F006D898E /* 62-contrast.png in Resources */,
+				C3B9F9D417503CDD001CCC50 /* BlueTexture.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C359603719CE34FC005CDFB9 /* BarChartController.swift in Sources */,
+				C359603819CE34FC005CDFB9 /* iPhoneAppDelegate.swift in Sources */,
+				C359603919CE34FC005CDFB9 /* PieChartController.swift in Sources */,
+				C359603A19CE34FC005CDFB9 /* ScatterPlotController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C37A40F120E0322D00C4FF48 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C37A40F020E0322D00C4FF48 /* Base */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
+		C3D0A20E20E019EB00BA2921 /* PieChart.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3D0A22820E01A0600BA2921 /* Base */,
+			);
+			name = PieChart.xib;
+			sourceTree = "<group>";
+		};
+		C3D0A21E20E019F000BA2921 /* BarChart.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3D0A22920E01A0600BA2921 /* Base */,
+			);
+			name = BarChart.xib;
+			sourceTree = "<group>";
+		};
+		C3D0A22120E019F300BA2921 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3D0A22A20E01A0600BA2921 /* Base */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		C3D0A22420E019F800BA2921 /* ScatterPlot.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3D0A22B20E01A0600BA2921 /* Base */,
+			);
+			name = ScatterPlot.xib;
+			sourceTree = "<group>";
+		};
+		C3D0A22720E019FF00BA2921 /* Launch Screen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3D0A22C20E01A0600BA2921 /* Base */,
+			);
+			name = "Launch Screen.xib";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3C3CBDE19EA125D00A0296A /* CorePlotWarnings.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 28ZA45DE7D;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CPTTestApp_iPhone_Prefix.pch;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Base.lproj/Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.CorePlot.CPTTestAppiPhone;
+				PRODUCT_NAME = "CPTTestApp-iPhone";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CPTTestApp-iPhone-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3C3CBDE19EA125D00A0296A /* CorePlotWarnings.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 28ZA45DE7D;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CPTTestApp_iPhone_Prefix.pch;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Base.lproj/Info.plist";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.CorePlot.CPTTestAppiPhone;
+				PRODUCT_NAME = "CPTTestApp-iPhone";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CPTTestApp-iPhone-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3C3CBDE19EA125D00A0296A /* CorePlotWarnings.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				SYMROOT = "$(SRCROOT)/../../build";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../../framework\" \"${PROJECT_DIR}/../../framework/Source\" \"${PROJECT_DIR}/../../framework/iPhoneOnly\"";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3C3CBDE19EA125D00A0296A /* CorePlotWarnings.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				SYMROOT = "$(SRCROOT)/../../build";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../../framework\" \"${PROJECT_DIR}/../../framework/Source\" \"${PROJECT_DIR}/../../framework/iPhoneOnly\"";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CPTTestApp-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CPTTestApp-iPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

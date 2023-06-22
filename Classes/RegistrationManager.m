@@ -9,7 +9,7 @@
 #import "RegistrationManager.h"
 
 #if MAC_APP_STORE
-#import "ValidateReceipt.h"
+//#import "ValidateReceipt.h"
 #endif
 
 @interface RegistrationManager () 
@@ -83,12 +83,14 @@ static RegistrationManager *sharedRegistrationManager = nil;
 
 - (RegistrationState)checkRegistration
 {
-	RegistrationState result = RegistrationInvalid;
-	if (validReceipt()) {
-		result = RegistrationValid;
-	}
+	return RegistrationValid;
 
-	return result;
+//	RegistrationState result = RegistrationInvalid;
+//	if (validReceipt()) {
+//		result = RegistrationValid;
+//	}
+//
+//	return result;
 }
 
 #else

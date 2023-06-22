@@ -9,7 +9,7 @@
 #import "ChartViewController.h"
 
 #import "NSMutableDictionary+Settings.h"
-#import "CPTCalendarFormatter.h"
+//#import "CPTCalendarFormatter.h"
 
 #import "DebugLog.h"
 
@@ -488,8 +488,8 @@
 	// initial plot space
 	CPTXYPlotSpace *plotSpace = [[[CPTXYPlotSpace alloc] init] autorelease];
 	{
-		plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(-0.5) length:CPTDecimalFromInteger(intervalCount)];
-		plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromInteger(0) length:CPTDecimalFromInteger(0)];
+		plotSpace.xRange = [CPTPlotRange plotRangeWithLocationDecimal:CPTDecimalFromFloat(-0.5) lengthDecimal:CPTDecimalFromInteger(intervalCount)];
+		plotSpace.yRange = [CPTPlotRange plotRangeWithLocationDecimal:CPTDecimalFromInteger(0) lengthDecimal:CPTDecimalFromInteger(0)];
 		[graph addPlotSpace:plotSpace];
 	}
 	
@@ -504,18 +504,18 @@
 		
 		CPTXYAxis *x = axisSet.xAxis;
 		{
-			x.orthogonalCoordinateDecimal = CPTDecimalFromInteger(0);
+			//x.orthogonalCoordinateDecimal = CPTDecimalFromInteger(0);
 			
 			if (chartPeriod == 1) {
 				// year
-				x.majorIntervalLength = CPTDecimalFromInteger(1);
+				x.majorIntervalLength = @1; //CPTDecimalFromInteger(1);
 				x.minorTicksPerInterval = 0;
 				x.majorGridLineStyle = clearLineStyle;
 				x.minorGridLineStyle = clearLineStyle;
 			}
 			else {
 				// month
-				x.majorIntervalLength = CPTDecimalFromInteger(12);
+				x.majorIntervalLength = @12; //CPTDecimalFromInteger(12);
 				x.minorTicksPerInterval = 3;
 				x.majorGridLineStyle = brightLineStyle;
 				x.minorGridLineStyle = dimLineStyle;
@@ -541,7 +541,7 @@
 		
 		CPTXYAxis *y = axisSet.yAxis;
 		{
-			y.orthogonalCoordinateDecimal = CPTDecimalFromInteger(0);
+			//y.orthogonalCoordinateDecimal = CPTDecimalFromInteger(0);
 			
 			y.labelingPolicy = CPTAxisLabelingPolicyAutomatic;
 			
@@ -572,7 +572,7 @@
 		barPlot.lineStyle = clearLineStyle;
 		barPlot.fill = [CPTFill fillWithColor:[CPTColor colorWithComponentRed:1.0f green:1.0f blue:1.0f alpha:0.25f]];
 		barPlot.barBasesVary = NO;
-		barPlot.barWidth = CPTDecimalFromFloat(1.0); // percentage of the available space
+		barPlot.barWidth = @1; //CPTDecimalFromFloat(1.0); // percentage of the available space
 		barPlot.barCornerRadius = 0.0f;
 		barPlot.barsAreHorizontal = NO;
 		
@@ -1005,8 +1005,8 @@
 			// adjust plot space
 			CPTXYPlotSpace *plotSpace = [[[CPTXYPlotSpace alloc] init] autorelease];
 			{
-				plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(-0.5) length:CPTDecimalFromInteger(intervalCount)];
-				plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromInteger(0) length:[_chartMaximumCache decimalValue]];
+				plotSpace.xRange = [CPTPlotRange plotRangeWithLocationDecimal:CPTDecimalFromFloat(-0.5) lengthDecimal:CPTDecimalFromInteger(intervalCount)];
+				plotSpace.yRange = [CPTPlotRange plotRangeWithLocationDecimal:CPTDecimalFromInteger(0) lengthDecimal:[_chartMaximumCache decimalValue]];
 				[graph addPlotSpace:plotSpace];
 			}
 			
