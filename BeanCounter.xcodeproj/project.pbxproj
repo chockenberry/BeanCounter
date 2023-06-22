@@ -12,7 +12,6 @@
 		440DC4A115000DED00246B63 /* RegionSalesReportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 440DC4A015000DED00246B63 /* RegionSalesReportOperation.m */; };
 		440DC4AF1501475700246B63 /* ProductSalesChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440DC4AE1501475700246B63 /* ProductSalesChartViewController.m */; };
 		440DC4E01506C82E00246B63 /* ProductSalesChartOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 440DC4DE150536C200246B63 /* ProductSalesChartOperation.m */; };
-		4419B4412A44DAFA0018CC1D /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C6CB7C2A44DA7A001AED2E /* CorePlot.framework */; };
 		4421C287147EF58000F66CFD /* AccountDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4421C285147EF58000F66CFD /* AccountDocument.xib */; };
 		4421C28B1481B1E900F66CFD /* SourceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4421C2891481B1E900F66CFD /* SourceListViewController.m */; };
 		4421C28C1481B1E900F66CFD /* SourceListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4421C28A1481B1E900F66CFD /* SourceListView.xib */; };
@@ -32,6 +31,7 @@
 		445887F21524D87B00DC393C /* ErrorCodeValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 445887F11524D87A00DC393C /* ErrorCodeValueTransformer.m */; };
 		445887F4152514C100DC393C /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 445887F3152514C100DC393C /* info.png */; };
 		44588808152679B800DC393C /* ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 44588807152679B800DC393C /* ColorPalette.m */; };
+		44716F5C2A44F5F400092672 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C6CB7C2A44DA7A001AED2E /* CorePlot.framework */; };
 		4473FC5914B18A3F00795B1E /* EditProductsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4473FC5614B18A3F00795B1E /* EditProductsView.xib */; };
 		4473FC5A14B18A3F00795B1E /* EditProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4473FC5814B18A3F00795B1E /* EditProductsViewController.m */; };
 		4473FC5E14B18BF700795B1E /* EditGroupsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4473FC5B14B18BF700795B1E /* EditGroupsView.xib */; };
@@ -77,13 +77,13 @@
 		44ACE02D12EB9076009F385F /* Earning.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ACE02612EB9076009F385F /* Earning.m */; };
 		44ACE02E12EB9076009F385F /* Region.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ACE02812EB9076009F385F /* Region.m */; };
 		44ACE11A12ECC9C1009F385F /* ReportImporterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 44ACE11912ECC9C1009F385F /* ReportImporterOperation.m */; };
-		44C6CB8D2A44DACE001AED2E /* CorePlot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44C6CB7C2A44DA7A001AED2E /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		44CBA50014FEA31D00D45D68 /* ProductEarningsReportOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CBA4FF14FEA31D00D45D68 /* ProductEarningsReportOperation.m */; };
 		44CC579F14B138AA00440E5E /* ImportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CC579E14B138AA00440E5E /* ImportViewController.m */; };
 		44CC57A114B138B600440E5E /* ImportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CC57A014B138B600440E5E /* ImportView.xib */; };
 		44CC57BF14B1408000440E5E /* print.css in Resources */ = {isa = PBXBuildFile; fileRef = 44CC57BE14B1408000440E5E /* print.css */; };
 		44CC580E14B7725C00440E5E /* Default-Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44CC580D14B7725C00440E5E /* Default-Settings.plist */; };
 		44D48183150FD61F00E667B4 /* GraphHostingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D48182150FD61F00E667B4 /* GraphHostingView.m */; };
+		44D8E4DB2A44F54A00E0BEFD /* CorePlot.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 44C6CB7C2A44DA7A001AED2E /* CorePlot.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		44DE48E5151A91B600F141A5 /* RegionSalesChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DE48E4151A91B600F141A5 /* RegionSalesChartViewController.m */; };
 		44DE48FE151BE09000F141A5 /* RegionSalesChartOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DE48FD151BE09000F141A5 /* RegionSalesChartOperation.m */; };
 		44DE490F151D381200F141A5 /* ProductEarningsChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44DE490E151D381100F141A5 /* ProductEarningsChartViewController.m */; };
@@ -111,6 +111,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		44716F5D2A44F60100092672 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = "CorePlot Mac";
+		};
 		44C6CB7B2A44DA7A001AED2E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
@@ -167,23 +174,16 @@
 			remoteGlobalIDString = C37EA6B71BC83F2D0091C8F7;
 			remoteInfo = "UnitTests tvOS";
 		};
-		44C6CB8B2A44DAAC001AED2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 44C6CB6B2A44DA7A001AED2E /* CorePlot.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = "CorePlot Mac";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		447412FC2A44CEFF00698EAD /* Embed Frameworks */ = {
+		44D8E4D92A44F52F00E0BEFD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				44C6CB8D2A44DACE001AED2E /* CorePlot.framework in Embed Frameworks */,
+				44D8E4DB2A44F54A00E0BEFD /* CorePlot.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,7 +387,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4419B4412A44DAFA0018CC1D /* CorePlot.framework in Frameworks */,
+				44716F5C2A44F5F400092672 /* CorePlot.framework in Frameworks */,
 				775DFF38067A968500C5B868 /* Cocoa.framework in Frameworks */,
 				44285A9812F9FF13001E020A /* WebKit.framework in Frameworks */,
 				447413052A44D50600698EAD /* libicucore.tbd in Frameworks */,
@@ -914,12 +914,12 @@
 				8D15AC2B0486D014006FF6A4 /* Resources */,
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
-				447412FC2A44CEFF00698EAD /* Embed Frameworks */,
+				44D8E4D92A44F52F00E0BEFD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				44C6CB8C2A44DAAC001AED2E /* PBXTargetDependency */,
+				44716F5E2A44F60100092672 /* PBXTargetDependency */,
 			);
 			name = BeanCounter;
 			productInstallPath = "$(HOME)/Applications";
@@ -1142,10 +1142,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		44C6CB8C2A44DAAC001AED2E /* PBXTargetDependency */ = {
+		44716F5E2A44F60100092672 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "CorePlot Mac";
-			targetProxy = 44C6CB8B2A44DAAC001AED2E /* PBXContainerItemProxy */;
+			targetProxy = 44716F5D2A44F60100092672 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1244,6 +1244,7 @@
 				GCC_PREFIX_HEADER = BeanCounter_Prefix.pch;
 				INFOPLIST_FILE = "BeanCounter-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iconfactory.BeanCounter;
 				PRODUCT_NAME = BeanCounter;
@@ -1270,6 +1271,7 @@
 				GCC_PREFIX_HEADER = BeanCounter_Prefix.pch;
 				INFOPLIST_FILE = "BeanCounter-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iconfactory.BeanCounter;
 				PRODUCT_NAME = BeanCounter;
@@ -1282,6 +1284,7 @@
 		26FC0AAA0875C8B900E6366F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1301,6 +1304,7 @@
 		26FC0AAB0875C8B900E6366F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
