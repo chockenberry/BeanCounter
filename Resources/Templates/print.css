@@ -17,11 +17,13 @@ table {
 th {
 	font-size: 13px;
 	padding: 4px;
+	width: 15%;
 }
 td {
 	font-size: 12px;
 	background-color: #f7f7f7;
 	padding: 2px;
+	width: 15%;
 }
 
 tr.header th {
@@ -47,6 +49,7 @@ tr.total {
 
 .product {
 	text-align:left;
+	width: 20%;
 }
 .region {
 	text-align:left;
