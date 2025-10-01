@@ -65,6 +65,15 @@
 		<key>currencySymbol</key>
 		<string>$</string>
 	</dict>
+	<key>AP</key>
+	<dict>
+		<key>name</key>
+		<string>South Asia and Pacific</string>
+		<key>currency</key>
+		<string>USD</string>
+		<key>currencySymbol</key>
+		<string>$</string>
+	</dict>
 	<key>CH</key>
 	<dict>
 		<key>name</key>
